@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> RideHistoryModel</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>RideHistoryModel</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+            
+
+
+    
+    <h4 class="name" id="module:RideHistoryModel">
+        <a class="href-link" href="#module:RideHistoryModel">#</a>
+        
+        <span class="code-name">
+            
+                module:RideHistoryModel<span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        The data-layer for a ride history.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_rideHistory.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_rideHistory.js.html">src/models/rideHistory.js</a>, <a href="src_models_rideHistory.js.html#line118">line 118</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Example usage of RideHistory model.</p>
+    
+    
+        <pre class="prettyprint"><code>let rideHistory1 = new RideHistory({  rideScheduleId: mongoose.Types.ObjectId('5f574fe68b17b9087e60ac0c'),  vehicleId: mongoose.Types.ObjectId('5f58f5876da0db3ca0955318'),  driverId: mongoose.Types.ObjectId('5f58f4ea9207efc18929c52a'),  passengers: {    '5f5b4d9c6b20f6440bc4fd5c': {      userId: mongoose.Types.ObjectId('5f5b4d9c6b20f6440bc4fd5c'),      isPaid: true,      rating: {        rating: 4.5,        comment: 'Loved the ride.'      }    },  },  expectedCost: 15.5,  realCost: 13.2,  endDate: new Date(),  route: mongoose.Types.ObjectId('5f5b4d6f92bef1ff5fa1ed20')});</code></pre>
+    
+
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">mongoose.Schema</span>
+
+
+    </span>
+
+<h4 class="name" id="~PassengerSchema">
+    <a class="href-link" href="#~PassengerSchema">#</a>
+    
+        
+            <span class='tag'>inner</span>
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        PassengerSchema
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Passenger nested schema.
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>userId</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">mongoose.ObjectId</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last">Passenger's user id.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>isPaid</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">boolean</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last">Passenger already paid.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>rating</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">RatingSchema</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last">Passenger rating.</td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_rideHistory.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_rideHistory.js.html">src/models/rideHistory.js</a>, <a href="src_models_rideHistory.js.html#line54">line 54</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">mongoose.Schema</span>
+
+
+    </span>
+
+<h4 class="name" id="~RatingSchema">
+    <a class="href-link" href="#~RatingSchema">#</a>
+    
+        
+            <span class='tag'>inner</span>
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        RatingSchema
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Rating nested schema.
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>rating</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Rating starts from 0 to 5.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>comment</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Rating comment.</td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_rideHistory.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_rideHistory.js.html">src/models/rideHistory.js</a>, <a href="src_models_rideHistory.js.html#line28">line 28</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">mongoose.Schema</span>
+
+
+    </span>
+
+<h4 class="name" id="~RideHistorySchema">
+    <a class="href-link" href="#~RideHistorySchema">#</a>
+    
+        
+            <span class='tag'>inner</span>
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        RideHistorySchema
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Ride history schema.
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>rideScheduleId</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">mongoose.ObjectId</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history's ride schedule id.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>vehicleId</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">mongoose.ObjectId</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history vehicle id.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>driverId</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">mongoose.ObjectId</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history driver id.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>passengers</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Map.&lt;PassengerSchema></span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history passengers.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>expectedCost</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history expected cost.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>realCost</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history real cost.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>startDate</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Date</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history start date.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>endDate</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Date</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history end date.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>route</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">mongoose.ObjectId</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">Ride history used route.</td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_rideHistory.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_rideHistory.js.html">src/models/rideHistory.js</a>, <a href="src_models_rideHistory.js.html#line76">line 76</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

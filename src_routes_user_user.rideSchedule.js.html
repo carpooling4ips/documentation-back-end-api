@@ -1,0 +1,629 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> src/routes/user/user.rideSchedule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/routes/user/user.rideSchedule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module UserRideScheduleRoute
+ * @category Routes
+ */
+
+'use strict'
+
+/*
+ * ==================================================
+ * | Imports                                        |
+ * ==================================================
+ */
+import express from 'express'
+import passport from 'passport'
+
+// Controllers
+import { UserRideScheduleController } from '../../controllers/index.js'
+
+/*
+ * ==================================================
+ * | Constants                                      |
+ * ==================================================
+ */
+const router = express.Router({
+  mergeParams: true
+})
+
+/*
+ * ==================================================
+ * | Routes                                         |
+ * ==================================================
+ */
+
+/**
+ * Get all user's ride schedules.
+ *
+ * @name Ride Schedule Get All
+ * @path {GET} /user/:user/rideSchedule
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user   Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @query {string}  mode      Specifies if retrieving user's ride schedules as a driver or as a passenger. Possible values: driver, passenger.
+ * @query {number}  [week]    Specifies the week number of the week year to retrieve the ride schedules. Possible values: 1-53. At least one week or month must be specified, if both specified, the month take precedence.
+ * @query {number}  [month]   Specifies the month number to retrieve the ride schedules. Possible values: 1-12. At least one week or month must be specified, if both specified, the month take precedence.
+ * @query {number}  year      Specifies year number to retrieve the ride schedules.
+ * @code {200} The user's ride schedules retrieval succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ * @response {string}     id                The ride schedule's id.
+ * @response {string}     alias             The ride schedule's alias
+ * @response {string}     realizationDate   The ride schedule's realization date (iso 8601 format).
+ * @response {number}     status            The ride schedule's status. Possible values: 1 (schedule), 2 (waiting for passengers), 3 (started), 4 (finished), 5 (canceled).
+ * @example &lt;caption>Possible request:&lt;/caption>
+ * http://127.0.0.1:2450/api/user/me/rideSchedule?mode=driver&amp;month=11&amp;year=2020
+ * @example &lt;caption>Possible output:&lt;/caption>
+ * [
+ *   {
+ *     "id": "5fa2a0c8481a0e3bd017c21d",
+ *     "alias": "Test 2",
+ *     "realizationDate": "2020-11-05T13:30:00.000Z",
+ *     "status": 1
+ *   }
+ * ]
+ */
+router.get('/', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateGetRideSchedules(), UserRideScheduleController.getRideSchedules)
+
+/**
+ * Search for the specified ride schedule.
+ *
+ * @name Ride Schedule Search
+ * @path {GET} /user/:user/rideSchedule/search
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user   Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @query {string}    date            Specifies the searching date and time (iso 8601 format).
+ * @query {number}    tolerance       Specifies the time tolerance in minutes.
+ * @query {boolean}   toDestination   Specifies if searching for to or from destination ride schedules.
+ * @query {string}    meetingPoint    Specifies the searching meeting point coordinates (latitude,longitude format).
+ * @query {number}    radius          Specifies the searching maximum radius from meeting point in meters.
+ * @code {200} The user's ride schedule searching succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ * @response {string}     id                          The ride schedule's id.
+ * @response {string}     rideGroupId                 The ride schedule's ride group id.
+ * @response {string}     realizationDate             The ride schedule's realization date (iso 8601 format).
+ * @response {string}     driver.name                 The ride schedule driver's name.
+ * @response {string}     [driver.avatar.fileName]    The ride schedule driver's avatar file name on the server.
+ * @response {string}     [driver.avatar.mimeType]    The ride schedule driver's avatar file mime type.
+ * @response {number}     vehicle.fuelType            The ride schedule vehicle's fuel type. Possible values: 1 (Gasoline), 2 (Diesel), 3 (Gpl), 4 (Electric).
+ * @response {number}     vehicle.consumption         The ride schedule vehicle's consumption in l/100 km or kWh/100 km..
+ * @response {number}     vehicle.emissions           The ride schedule vehicle's CO2 emissions in g/km.
+ * @response {number}     vehicle.seats               The ride schedule vehicle's seats.
+ * @response {number}     vehicle.remainingSeats      The ride schedule vehicle's remaining seats.
+ * @response {number}     route.duration              The ride schedule route's duration.
+ * @response {number}     route.distance              The ride schedule route's distance.
+ * @response {boolean}    route.hasTolls              If the ride schedule route's has tools.
+ * @example &lt;caption>Possible request:&lt;/caption>
+ * http://127.0.0.1:2450/api/user/me/rideSchedule/search?date=2020-11-05T13%3A34%3A00Z&amp;tolerance=10&amp;toDestination=true&amp;meetingPoint=38.9176205%2C-9.2240000&amp;radius=50
+ * @example &lt;caption>Possible output with mode as driver:&lt;/caption>
+ * [
+ *   {
+ *     "id": "5fa2a0c8481a0e3bd017c21d",
+ *     "rideGroupId": "5fa2a0c5481a0e3bd017c21a",
+ *     "realizationDate": "2020-11-05T13:30:00.000Z",
+ *     "driver": {
+ *       "name": "Edgar Santos",
+ *       "avatar": {
+ *         "fileName": "3229c0fae86ecf38929161777824f5c5",
+ *         "mimeType": "image/jpeg"
+ *       }
+ *     },
+ *     "vehicle": {
+ *       "fuelType": 1,
+ *       "consumption": 12,
+ *       "emissions": 24,
+ *       "seats": 5,
+ *       "remainingSeats": 4
+ *     },
+ *     "route": {
+ *       "duration": 2767,
+ *       "distance": 67534,
+ *       "hasTolls": true
+ *     }
+ *   }
+ * ]
+ */
+router.get('/search', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateSearchRideSchedule(), UserRideScheduleController.searchRideSchedule)
+
+/**
+ * Get user's next ride schedule.
+ *
+ * @name Ride Schedule Get Next
+ * @path {GET} /user/:user/rideSchedule/next
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user         Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @query {string}  mode    Specifies if retrieving user's ride schedule as a driver or as a passenger. Possible values: driver, passenger.
+ * @code {200} The user's next ride schedule retrieval succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {404} The user does not have an active or future ride schedule for the near time.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ * @response {string}     id                                          The ride schedule's id.
+ * @response {string}     rideGroupId                                 The ride schedule's ride group id.
+ * @response {string}     alias                                       The ride schedule's ride group alias.
+ * @response {string}     status                                      The ride schedule's status.
+ * @response {string}     realizationDate                             The ride schedule's realization date (iso 8601 format).
+ * @response {boolean}    toDestination                               If the ride schedule is to or from destination.
+ * @response {string}     route.summary                               The ride schedule route's summary.
+ * @response {number}     route.duration                              The ride schedule route's duration.
+ * @response {number}     route.distance                              The ride schedule route's distance.
+ * @response {boolean}    route.hasTolls                              If the ride schedule route's has tools.
+ * @response {string}     route.startLocation.address                 The ride schedule route's start location address.
+ * @response {number}     route.startLocation.coordinates.latitude    The ride schedule route's start location latitude.
+ * @response {number}     route.startLocation.coordinates.longitude   The ride schedule route's start location longitude.
+ * @response {string}     route.endLocation.address                   The ride schedule route's end location address.
+ * @response {number}     route.endLocation.coordinates.latitude      The ride schedule route's end location latitude.
+ * @response {number}     route.endLocation.coordinates.longitude     The ride schedule route's end location longitude.
+ * @response {string}     route.polyline                              The ride schedule route's google maps polyline.
+ * @response {number}     route.boundary.southwest.latitude           The ride schedule route's southwest boundary latitude.
+ * @response {number}     route.boundary.southwest.longitude          The ride schedule route's southwest boundary longitude.
+ * @response {number}     route.boundary.northeast.latitude           The ride schedule route's northeast boundary latitude.
+ * @response {number}     route.boundary.northeast.longitude          The ride schedule route's northeast boundary longitude.
+ * @example &lt;caption>Possible request:&lt;/caption>
+ * http://127.0.0.1:2450/api/user/me/rideSchedule/next?mode=driver
+ * @example &lt;caption>Possible output with mode as driver:&lt;/caption>
+ * {
+ *   "id": "5ff12e97949c34545059e635",
+ *   "rideGroupId": "5ff12e97949c34545059e634",
+ *   "alias": "Test A",
+ *   "status": 1,
+ *   "realizationDate": "2021-01-03T02:55:00.000Z",
+ *   "toDestination": true,
+ *   "route": {
+ *     "summary": "A12",
+ *     "duration": 2767,
+ *     "distance": 67534,
+ *     "hasTolls": true,
+ *     "startLocation": {
+ *       "address": "R. Afonso Porfírio 1, 2665-506 Venda do Pinheiro, Portugal",
+ *       "coordinates": {
+ *         "latitude": 38.9173716,
+ *         "longitude": -9.2232405
+ *       }
+ *     },
+ *     "endLocation": {
+ *       "address": "Campus do IPS - Estefanilha, 2910-761 Setúbal, Portugal",
+ *       "coordinates": {
+ *         "latitude": 38.5221095,
+ *         "longitude": -8.838884499999999
+ *       }
+ *     },
+ *     "polyline": "q`plFflhw@f@d@W_DcAyHx@E~@_DdEyHjAmC`@cAd@i@dAwJ~AyIjA{S`@uHG_FiA}H{AmCa@qAHs@bCmCr@aGVoBnAwCxDqKfAyC~AaFj@Yh@H|@l@bDdCpAb@~CNvXkGjCAz@`@rAbCt@jC~@xENpCKhKd@`Dx@`B`@`Bc@pA}CjByMrFqC`@m@Mi@q@MqAX_Ab@]dDcAvHmCfG_EfJeKlEwEbJmFrHuD~EqD|G}DrEeAjDUjIc@pK[fIVvV|DrThGdUbKrIpEvCfApDp@nDNbEOxDu@nFqBlKeG~D}ClF}EtBsCzC}G`BoJv@ePfAmIpBmGnCmEbG}E`FeBbKuBtCiA|DuCfBmBxE_HfBwEzAgGtC{OvBuGzCqGnEiHdFmFtGsE|KmFjHmEdIgIpFiGpGsJvEaH`GiFbE}B~I}BfHq@dHQtFH`N|@tFFrIw@zFcBxGqDhEuDfC}C|EgIbFuIjEuErF_DhDeAhDa@|BEzAV`Cv@~AVbAa@x@oAzD{IlCmCfFeBpDW|FJrER`BZbAr@zAd@h@_@^yAqAoGIyCLqK^yH|AkPxBgM~CsOvCaSjCiSdB{GlFiIpE{GtEmMfCuJjAgChDgElQgLrIkG|HmJpCiFlBoFdAkGXqEo@iWiAyXIgQpBw`@rDgq@tA}QxAcLfDaQtCoKbIcTdIgOph@aw@teA}}Anx@elApsAopB`MmRdMqUpGuNzJeXnKo[dKu\\fDaRz@aIr@cMbBuc@pBqPzNcr@dKe_@xD}PbFi[~BqRXqFLgOc@yREwKX{Jj@wPE_Kw@iLiBsKwEoPoBuIkAiNFgKtAoMdD}KlFmJlOcRbMoNpGwEbImDxIuBj[{G|LsD|MeFxd@_Q`XyJ~c@uPxJwCpJ_BzGe@fGKnv@hCpM^|IZbEMhEi@jJ{CzLmEvH_EtR_MdTaNjLyI|HmI`IoLbMkXhKkVnCwFrEeH~ImJdLkH~HwClJmBnKc@~J`@h^bE|Rn@fOMda@oBliA{Fve@eCrIsAhEaBpBk@`EiBlD_AlEQrJ`ArGHnIeA`DMhEh@rD~AxCvChCtDlC~BrCrAhDl@tCBxOk@hSNjI^jLbArOfCtJ~BrEnBxAvAjBlAfBHbBg@`D{CpAsAhBiBdDmFjEsKzEwG|GkOzAgE`B}GpAqK^uJn@iKv@cErBwG`BiD|@yA`GoGlKgG`L}FzLuFzPyEfC[vEJ`VfCzY|C`IHhEL`@A?gBAmBAoEx@qNRwC@e@j@?^@RCp@Qt@k@vAqBzAfAgAh@E|@?RHZDVMLSI",
+ *     "boundary": {
+ *       "southwest": {
+ *         "latitude": 38.5216333,
+ *         "longitude": -9.223433199999999
+ *       },
+ *       "northeast": {
+ *         "latitude": 38.9176332,
+ *         "longitude": -8.8376208
+ *       }
+ *     }
+ *   }
+ * }
+ */
+router.get('/next', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateGetRideScheduleNext(), UserRideScheduleController.getRideScheduleNext)
+
+/**
+ * Get all user's ride schedule requests.
+ *
+ * @name Ride Schedule Get All user requests
+ * @path {GET} /user/:user/rideSchedule/request
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user   Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @query {string}  mode      Specifies if retrieving user's ride schedules as a driver or as a passenger. Possible values: driver, passenger.
+ * @code {200} The user's ride schedules retrieval succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ * @response {string}     id                The request's id.
+ * @response {string}     scheduleId        The ride schedule's id
+ * @response {string}     groupAlias        The ride schedule's group alias.
+ * @response {object}     passenger         The data of the passenger requesting the ride
+ * @response {object}     driver            The data of the driver offering the ride
+ * @response {number}     status            The ride schedule's status. Possible values: 1 (schedule), 2 (waiting for passengers), 3 (started), 4 (finished), 5 (canceled).
+ * @example &lt;caption>Possible request:&lt;/caption>
+ * http://127.0.0.1:2450/api/user/me/rideSchedule/request
+ * @example &lt;caption>Possible output as a driver:&lt;/caption>
+ *[
+ *      {
+ *           "id": "5f9ab8387ad1583b1833f799",
+ *           "scheduleId": "5f9ab8387ad1583b1833f79b",
+ *           "groupAlias": "adqaqwssswdw",
+ *           "groupId": "5f9abc9736c78b3134689efd",
+ *           "passenger": {
+ *               "id": "5f918a6b75975c50841391fc",
+ *               "name": "Edgar Santos",
+ *               "title": "Estudante",
+ *               "avatar": {
+ *                   "fileName": "3229c0fae86ecf38929161777824f5c5",
+ *                   "mimeType": "image/jpeg"
+ *               }
+ *         },
+ *           "status": 1
+ *       }
+ *   ]
+ * @example &lt;caption>Possible output as a passenger:&lt;/caption>
+ *[
+ *      {
+ *           "id": "5f9ab8387ad1583b1833f799",
+ *           "groupId": "5f9abc9736c78b3134689efd",
+ *           "groupAlias": "adqaqwssswdw",
+ *           "driver": {
+ *               "id": "5f918a6b75975c50841391fc",
+ *               "name": "Edgar Santos",
+ *               "title": "Estudante",
+ *               "avatar": {
+ *                   "fileName": "3229c0fae86ecf38929161777824f5c5",
+ *                   "mimeType": "image/jpeg"
+ *               }
+ *         },
+ *           "status": 1
+ *       }
+ *   ]
+ */
+router.get('/request', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateGetRideRequests(), UserRideScheduleController.getRideScheduleRequests)
+
+/**
+ * Handle a ride schedule request.
+ *
+ * @name Ride Handle a Passenger's Ride Request
+ * @path {POST} /user/:user/rideSchedule/:scheduleId/:passengerId/handle
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user   Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @params {string}   :rideSchedule  Id of the ride schedule in question.
+ * @params {string}   :passengerId   Id of the passanger that made the request.
+ * @query {string}  operation    Specifies the operation to execute. Possible values: accept, refuse.
+ * @code {204} The request handling succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission or the user is not ride schedules driver.
+ * @code {409} The passenger's request is no longer on a pending state.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ * @example &lt;caption>Possible request:&lt;/caption>
+ * http://127.0.0.1:2450/api/user/me/rideSchedule/:scheduleId/handle
+ */
+router.post('/:scheduleId/:passengerId/handle', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateHandleRideRequest(), UserRideScheduleController.handleRideScheduleRequest)
+
+/**
+ * Get specified ride schedule details.
+ *
+ * @name Ride Schedule Get Id
+ * @path {GET} /user/:user/rideSchedule/:scheduleId
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user         Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @params {string}   :scheduleId   The ride schedule's id of the retrieving ride schedule.
+ * @query {string}  mode    Specifies if retrieving user's ride schedule as a driver or as a passenger. Possible values: driver, passenger.
+ * @code {200} The user's ride schedule retrieval succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {404} The requested schedule id for the specified user id does not exist.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ * @response {string}     id                                          The ride schedule's id.
+ * @response {string}     alias                                       The ride schedule's ride group alias.
+ * @response {string}     status                                      The ride schedule's status.
+ * @response {string}     rideGroupId                                 The ride schedule's ride group id.
+ * @response {string}     realizationDate                             The ride schedule's realization date (iso 8601 format).
+ * @response {string}     driver.id                                   The ride schedule driver's id.
+ * @response {string}     driver.name                                 The ride schedule driver's name.
+ * @response {string}     [driver.avatar.fileName]                    The ride schedule driver's avatar file name on the server.
+ * @response {string}     [driver.avatar.mimeType]                    The ride schedule driver's avatar file mime type.
+ * @response {string}     vehicle.id                                  The ride schedule vehicle's id.
+ * @response {string}     vehicle.alias                               The ride schedule vehicle's alias. Visible only when mode is driver.
+ * @response {number}     vehicle.fuelType                            The ride schedule vehicle's fuel type. Possible values: 1 (Gasoline), 2 (Diesel), 3 (Gpl), 4 (Electric).
+ * @response {number}     vehicle.consumption                         The ride schedule vehicle's consumption in l/100 km or kWh/100 km..
+ * @response {number}     vehicle.emissions                           The ride schedule vehicle's CO2 emissions in g/km.
+ * @response {number}     vehicle.seats                               The ride schedule vehicle's seats.
+ * @response {number}     vehicle.remainingSeats                      The ride schedule vehicle's remaining seats.
+ * @response {string}     passengers[].id                             The ride schedule passenger's id.
+ * @response {string}     passengers[].name                           The ride schedule passenger's name.
+ * @response {string}     [passengers[].avatar.fileName]              The ride schedule passenger's avatar file name on the server.
+ * @response {string}     [passengers[].avatar.mimeType]              The ride schedule passenger's avatar file mime type.
+ * @response {number}     passengers[].status                         The ride schedule passenger's status. Possible values: -1 (part of the ride group), 1 (pending), 2 (accepted).
+ * @response {string}     [passengers[].handlingDate]                 The ride schedule passenger's status handling date (iso 8601 format). Not applicable to passengers from the ride group.
+ * @response {boolean}    passengers[].confirmed                      The ride schedule passenger's attendance confirmed.
+ * @response {boolean}    toDestination                               If the ride schedule is to or from destination.
+ * @response {boolean}    isRecurrent                                 If the ride schedule is recurrent.
+ * @response {string}     route.summary                               The ride schedule route's summary.
+ * @response {number}     route.duration                              The ride schedule route's duration.
+ * @response {number}     route.distance                              The ride schedule route's distance.
+ * @response {boolean}    route.hasTolls                              If the ride schedule route's has tools.
+ * @response {string}     route.startLocation.address                 The ride schedule route's start location address.
+ * @response {number}     route.startLocation.coordinates.latitude    The ride schedule route's start location latitude.
+ * @response {number}     route.startLocation.coordinates.longitude   The ride schedule route's start location longitude.
+ * @response {string}     route.endLocation.address                   The ride schedule route's end location address.
+ * @response {number}     route.endLocation.coordinates.latitude      The ride schedule route's end location latitude.
+ * @response {number}     route.endLocation.coordinates.longitude     The ride schedule route's end location longitude.
+ * @response {string}     route.polyline                              The ride schedule route's google maps polyline.
+ * @response {number}     route.boundary.southwest.latitude           The ride schedule route's southwest boundary latitude.
+ * @response {number}     route.boundary.southwest.longitude          The ride schedule route's southwest boundary longitude.
+ * @response {number}     route.boundary.northeast.latitude           The ride schedule route's northeast boundary latitude.
+ * @response {number}     route.boundary.northeast.longitude          The ride schedule route's northeast boundary longitude.
+ * @response {boolean}    [canApply]                                  If the user can request to participate as a passenger on the ride schedule. Visible only when mode is passenger.
+ * @example &lt;caption>Possible request:&lt;/caption>
+ * http://127.0.0.1:2450/api/user/me/rideSchedule/5fa91f5fec1dd40bb41dcaf7?mode=driver
+ * @example &lt;caption>Possible output with mode as driver:&lt;/caption>
+ * {
+ *   "id": "5fa91f5fec1dd40bb41dcaf7",
+ *   "rideGroupId": "5fa91f5fec1dd40bb41dcaf6",
+ *   "alias": "Test 20",
+ *   "status": 1,
+ *   "realizationDate": "2020-11-10T14:30:15.000Z",
+ *   "driver": {
+ *     "id": "5f918a6b75975c50841391fc",
+ *     "name": "Edgar Santos",
+ *     "avatar": {
+ *       "fileName": "3229c0fae86ecf38929161777824f5c5",
+ *       "mimeType": "image/jpeg"
+ *     }
+ *   },
+ *   "vehicle": {
+ *     "id": "5f7c7476ba695503f0845454",
+ *     "alias": "Vehicle 1",
+ *     "fuelType": 1,
+ *     "consumption": 12,
+ *     "emissions": 24,
+ *     "seats": 5,
+ *     "remainingSeats": 3
+ *   },
+ *   "passengers": [
+ *     {
+ *       "id": "5f96b926fc19780d3848ce33",
+ *       "name": "Henoch Vitureira",
+ *       "status": 2,
+ *       "handlingDate": "2020-11-17T13:30:00.000Z",
+ *       "confirmed": true
+ *     },
+ *     {
+ *       "id": "5f96b926fc19780d3848ce34",
+ *       "name": "Rui Madeira",
+ *       "avatar": {
+ *         "fileName": "3229c0fae86ecf38929161777824f5c6",
+ *         "mimeType": "image/jpeg"
+ *       },
+ *       "status": -1,
+ *       "confirmed": false
+ *     }
+ *   ],
+ *   "toDestination": true,
+ *   "isRecurrent": false,
+ *   "route": {
+ *     "summary": "A12",
+ *     "duration": 2767,
+ *     "distance": 67534,
+ *     "hasTolls": true,
+ *     "startLocation": {
+ *       "address": "R. Afonso Porfírio 1, 2665-506 Venda do Pinheiro, Portugal",
+ *       "coordinates": {
+ *         "latitude": 38.9173716,
+ *         "longitude": -9.2232405
+ *       }
+ *     },
+ *     "endLocation": {
+ *       "address": "Campus do IPS - Estefanilha, 2910-761 Setúbal, Portugal",
+ *       "coordinates": {
+ *         "latitude": 38.5221095,
+ *         "longitude": -8.838884499999999
+ *       }
+ *     },
+ *     "polyline": "q`plFflhw@f@d@W_DcAyHx@E~@_DdEyHjAmC`@cAd@i@dAwJ~AyIjA",
+ *     "boundary": {
+ *       "southwest": {
+ *         "latitude": 38.5216333,
+ *         "longitude": -9.223433199999999
+ *       },
+ *       "northeast": {
+ *         "latitude": 38.9176332,
+ *         "longitude": -8.8376208
+ *       }
+ *     }
+ *   }
+ * }
+ */
+router.get('/:scheduleId', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateGetRideScheduleDetail(), UserRideScheduleController.getRideScheduleDetail)
+
+/**
+ * Delete specified ride schedule.
+ *
+ * @name Ride Schedule Delete
+ * @path {DELETE} /user/:user/rideSchedule/:scheduleId
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user         Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @params {string}   :scheduleId   The ride schedule's id of the deleting ride schedule.
+ * @code {204} The ride schedule deletion succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {404} The requested schedule id for the specified user id does not exist.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ */
+router.delete('/:scheduleId', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateDeleteRideSchedule(), UserRideScheduleController.deleteRideSchedule)
+
+/**
+ * Request to participate on the specified ride schedule.
+ *
+ * @name Ride Schedule Passenger Request
+ * @path {POST} /user/:user/rideSchedule/:scheduleId/request
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user         Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @params {string}   :scheduleId   The ride schedule's id of the affecting ride schedule.
+ * @code {204} The passenger request to the ride schedule succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {404} The requested schedule id for the specified user id does not exist.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ */
+router.post('/:scheduleId/request', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateRequestRideSchedule(), UserRideScheduleController.requestRideSchedule)
+
+/**
+ * Confirm passenger attendance on the specified ride schedule.
+ *
+ * @name Ride Schedule Confirm Passenger Attendance
+ * @path {POST} /user/:user/rideSchedule/:scheduleId/confirmAttendance
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user         Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @params {string}   :scheduleId   The ride schedule's id of the affecting ride schedule.
+ * @code {204} The passenger attendance confirmation to the ride schedule succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {404} The requested schedule id for the specified user id does not exist.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ */
+router.post('/:scheduleId/confirmAttendance', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateRideScheduleConfirmPassengerAttendance(), UserRideScheduleController.rideScheduleConfirmPassengerAttendance)
+
+/**
+ * Set the status of the specified ride schedule.
+ *
+ * @name Ride Schedule Set Status
+ * @path {PUT} /user/:user/rideSchedule/:scheduleId/status
+ * @auth This route requires a valid user's token. If authentication fails it will return a 401 http status code.
+ * @header {string}   Authorization   The authentication user's token.
+ * @params {string}   :user         Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.
+ * @params {string}   :scheduleId   The ride schedule's id of the affecting ride schedule.
+ * @body {number}   status    The new ride schedule's status. Possible values: 2 (waiting for passengers), 3 (started), 4 (finished), 5 (canceled).
+ * @code {204} The ride schedule status update succeeded.
+ * @code {401} The user authentication has failed.
+ * @code {403} The authenticated user does not have permission.
+ * @code {404} The requested schedule id for the specified user id does not exist.
+ * @code {422} The request content is unable to be processed due to invalid fields.
+ * @code {500} An internal server error.
+ */
+router.put('/:scheduleId/status', passport.authenticate('jwt', { session: false }), UserRideScheduleController.validateSetRideScheduleStatus(), UserRideScheduleController.setRideScheduleStatus)
+
+/**
+ * The router-layer of the user's ride schedule.
+ */
+export default router
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

@@ -1,0 +1,1688 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> src/controllers/user/user.rideSchedule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/controllers/user/user.rideSchedule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module UserRideScheduleController
+ * @category Controllers
+ */
+
+'use strict'
+
+/*
+ * ==================================================
+ * | Imports                                        |
+ * ==================================================
+ */
+import express from 'express'
+import expressValidator from 'express-validator'
+import HttpStatus from 'http-status-codes'
+import mongoose from 'mongoose'
+import luxon from 'luxon'
+
+import ApiError from '../../utils/apiError.js'
+import NotificationManager from '../../utils/notificationManager.js'
+import { RideScheduleModel, RideGroupModel, RideHistoryModel, UserModel } from '../../models/index.js'
+
+/*
+ * ==================================================
+ * | Constants                                      |
+ * ==================================================
+ */
+const { checkSchema, validationResult } = expressValidator
+const { DateTime, Duration } = luxon
+const { ReasonPhrases, StatusCodes } = HttpStatus
+
+/*
+ * ==================================================
+ * | Exports                                        |
+ * ==================================================
+ */
+
+/**
+ * Class representing the user's ride group controller.
+ *
+ * @category Controllers
+ */
+export default class {
+  /*
+  * ==================================================
+  * | Public validation functions                    |
+  * ==================================================
+  */
+
+  /**
+   * Validate get ride schedules input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateGetRideSchedules () {
+    return [
+      checkSchema({
+        week: {
+          in: ['query'],
+          if: {
+            options: (value, { req, location, path }) => {
+              return !req.query.month
+            }
+          },
+          isInt: {
+            options: {
+              min: 1,
+              max: 53
+            }
+          },
+          toInt: true
+        },
+        month: {
+          in: ['query'],
+          if: {
+            options: (value, { req, location, path }) => {
+              return !req.query.week
+            }
+          },
+          isInt: {
+            options: {
+              min: 1,
+              max: 12
+            }
+          },
+          toInt: true
+        },
+        year: {
+          in: ['query'],
+          isInt: {
+            options: {
+              min: 1970
+            }
+          },
+          toInt: true
+        },
+        mode: {
+          in: ['query'],
+          isIn: {
+            options: [['driver', 'passenger']]
+          }
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate search ride schedule input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateSearchRideSchedule () {
+    return [
+      checkSchema({
+        date: {
+          in: ['query'],
+          isISO8601: {
+            options: {
+              strict: true
+            }
+          },
+          toDate: true
+        },
+        tolerance: {
+          in: ['query'],
+          isInt: {
+            options: {
+              min: 0
+            }
+          },
+          toInt: true
+        },
+        toDestination: {
+          in: ['query'],
+          isBoolean: true,
+          toBoolean: true
+        },
+        meetingPoint: {
+          in: ['query'],
+          isLatLong: true,
+          customSanitizer: {
+            options: (value, { req, location, path }) => {
+              try {
+                const coordinates = value.split(',')
+                return {
+                  latitude: coordinates[0],
+                  longitude: coordinates[1]
+                }
+              } catch (err) {
+                return null
+              }
+            }
+          }
+        },
+        radius: {
+          in: ['query'],
+          isFloat: {
+            options: {
+              min: 0
+            }
+          },
+          toFloat: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate get ride schedule detail input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateGetRideScheduleNext () {
+    return [
+      checkSchema({
+        mode: {
+          in: ['query'],
+          isIn: {
+            options: [['driver', 'passenger']]
+          }
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate get ride schedule detail input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateGetRideScheduleDetail () {
+    return [
+      checkSchema({
+        scheduleId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        mode: {
+          in: ['query'],
+          isIn: {
+            options: [['driver', 'passenger']]
+          }
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate get ride schedule detail input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateGetRideRequests () {
+    return [
+      checkSchema({
+        mode: {
+          in: ['query'],
+          isIn: {
+            options: [['driver', 'passenger']]
+          }
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate delete ride schedule input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateDeleteRideSchedule () {
+    return [
+      checkSchema({
+        scheduleId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate request ride schedule input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateRequestRideSchedule () {
+    return [
+      checkSchema({
+        scheduleId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate ride schedule confirm passenger attendance input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateRideScheduleConfirmPassengerAttendance () {
+    return [
+      checkSchema({
+        scheduleId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate set ride schedule status input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateSetRideScheduleStatus () {
+    return [
+      checkSchema({
+        scheduleId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        status: {
+          in: ['body'],
+          isInt: {
+            options: {
+              min: 2,
+              max: 5
+            }
+          },
+          toInt: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate handling (accept | refuse | cancel) ride schedule.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateHandleRideRequest () {
+    return [
+      checkSchema({
+        scheduleId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        passengerId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        operation: {
+          in: ['query'],
+          isIn: {
+            options: [['accept', 'reject']]
+          }
+        }
+      })
+    ]
+  }
+
+  /*
+  * ==================================================
+  * | Public route functions                         |
+  * ==================================================
+  */
+
+  /**
+   * Get the user's ride schedules as a driver or passenger.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getRideSchedules (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Handle request month/week option
+      let startDate
+      let endDate
+      if (req.query.month) {
+        startDate = DateTime.utc().set({ year: req.query.year }).set({ month: req.query.month }).startOf('month')
+        endDate = startDate.endOf('month')
+      } else if (req.query.week) {
+        startDate = DateTime.utc().set({ year: req.query.year }).set(({ weekNumber: req.query.week })).startOf('week')
+        endDate = startDate.endOf('week')
+      }
+
+      // Prepare find conditions for retrieving ride groups
+      const rideGroupFindConditions = {
+        isDisabled: false
+      }
+      switch (req.query.mode) {
+        case 'driver':
+          rideGroupFindConditions.driverId = userId
+          break
+        case 'passenger':
+          rideGroupFindConditions['passengers.' + userId] = { $exists: true }
+          break
+      }
+
+      // Retrieve ride groups
+      const rideGroupDocs = await RideGroupModel.find(rideGroupFindConditions, {
+        _id: true
+      })
+        .lean()
+        .exec()
+
+      // Prepare find conditions for retrieving ride schedules
+      const rideScheduleFindConditions = {
+        realizationDate: {
+          $gte: startDate,
+          $lte: endDate
+        },
+        isDisabled: false
+      }
+      switch (req.query.mode) {
+        case 'driver':
+          rideScheduleFindConditions.rideGroupId = { $in: rideGroupDocs.map(v => v._id) }
+
+          break
+        case 'passenger':
+          rideScheduleFindConditions.$or = [
+            {
+              rideGroupId: { $in: rideGroupDocs.map(v => v._id) }
+            },
+            {
+              passengerRequests: {
+                $elemMatch: {
+                  userId: userId,
+                  status: RideScheduleModel.schema.statics.PassengerRequestStatus.Accepted,
+                  isDisabled: false
+                }
+              }
+            }
+          ]
+
+          break
+      }
+
+      // Retrieve ride schedules
+      const rideScheduleDocs = await RideScheduleModel.find(rideScheduleFindConditions, {
+        rideGroupId: true,
+        realizationDate: true,
+        status: true
+      })
+        .populate('rideGroupId', 'alias recurrent.expiration')
+        .sort({
+          realizationDate: 1
+        })
+        .lean()
+        .map(docs => {
+          const docsArray = []
+          for (const doc of docs) {
+            // Ignore schedules after group expiring date
+            if (doc.rideGroupId.recurrent &amp;&amp; DateTime.fromJSDate(doc.realizationDate) >= DateTime.fromJSDate(doc.rideGroupId.recurrent.expiration)) continue
+
+            docsArray.push({
+              id: doc._id,
+              alias: doc.rideGroupId.alias,
+              realizationDate: DateTime.fromJSDate(doc.realizationDate).toUTC().toISO(),
+              status: doc.status
+            })
+          }
+          return docsArray
+        })
+        .exec()
+
+      res.status(200).send(rideScheduleDocs)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Search for the specified ride schedule.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async searchRideSchedule (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Prepare search parameters
+      const dateTime = DateTime.fromJSDate(req.query.date).toUTC()
+      const lowerDate = dateTime.minus({ minutes: req.query.tolerance })
+      const greaterDate = dateTime.plus({ minutes: req.query.tolerance })
+
+      // Retrieve ride schedules for the specified search parameters
+      const rideScheduleDocs = await RideScheduleModel.find({
+        realizationDate: {
+          $gte: lowerDate.toJSDate(),
+          $lte: greaterDate.toJSDate()
+        },
+        status: RideScheduleModel.schema.statics.Status.Scheduled,
+        isDisabled: false
+      }, {
+        rideGroupId: true,
+        realizationDate: true,
+        'passengerRequests.status': true,
+        'passengerRequests.isDisabled': true
+      })
+        .lean()
+        .exec()
+
+      // Retrieve ride groups for the previous filtered ride schedules and for the specified search parameters
+      const rideGroupDocs = await RideGroupModel.find({
+        _id: { $in: rideScheduleDocs.map(doc => doc.rideGroupId) },
+        driverId: { $ne: userId },
+        toDestination: req.query.toDestination,
+        meetingPoint: {
+          $nearSphere: {
+            $geometry: {
+              type: 'Point',
+              coordinates: [req.query.meetingPoint.longitude, req.query.meetingPoint.latitude]
+            },
+            $maxDistance: req.query.radius
+          }
+        },
+        isDisabled: false
+      }, {
+        _id: true,
+        'recurrent.expiration': true,
+        passengers: true
+      })
+        .populate('driverId', '-_id givenName surname avatar')
+        .populate('vehicleId', '-_id fuelType consumption emissions seats')
+        .populate('route', '-_id duration distance hasTolls')
+        .lean({ virtuals: true })
+        .map(docs => {
+          const docsObject = {}
+          docs.map(doc => {
+            docsObject[doc._id] = doc
+          })
+          return docsObject
+        })
+        .exec()
+
+      // Prepare returning response
+      const returnResponse = []
+      for (const rideScheduleDoc of rideScheduleDocs) {
+        const rideGroupDoc = rideGroupDocs[rideScheduleDoc.rideGroupId]
+        if (!rideGroupDoc) continue
+
+        // Ignore schedules after group expiring date
+        if (rideGroupDoc.recurrent &amp;&amp; DateTime.fromJSDate(rideScheduleDoc.realizationDate) >= DateTime.fromJSDate(rideGroupDoc.recurrent.expiration)) continue
+
+        let remainingSeats = rideGroupDoc.vehicleId.seats
+        let applicationStatus = 0
+
+        // Handle ride group passengers
+        for (const passengerId of Object.keys(rideGroupDoc.passengers)) {
+          --remainingSeats
+
+          if (passengerId === userId) {
+            applicationStatus = RideScheduleModel.schema.statics.PassengerRequestStatus.Accepted
+          }
+        }
+
+        // Handle ride schedules accepted passengers requests
+        for (const passenger of rideScheduleDoc.passengerRequests) {
+          if (passenger.isDisabled === true ||
+              passenger.status === RideScheduleModel.schema.statics.PassengerRequestStatus.Rejected) {
+            continue
+          }
+
+          if (passenger.status !== RideScheduleModel.schema.statics.PassengerRequestStatus.Pending) {
+            --remainingSeats
+          }
+
+          if (passenger.userId === userId) {
+            applicationStatus = passenger.status
+          }
+        }
+
+        // Add the schedule custom response to the returning array
+        returnResponse.push({
+          id: rideScheduleDoc._id,
+          rideGroupId: rideGroupDoc._id,
+          realizationDate: DateTime.fromJSDate(rideScheduleDoc.realizationDate).toUTC().toISO(),
+          driver: {
+            name: rideGroupDoc.driverId.name,
+            avatar: rideGroupDoc.driverId.avatar ? {
+              fileName: rideGroupDoc.driverId.avatar.fileName,
+              mimeType: rideGroupDoc.driverId.avatar.mimeType
+            } : undefined
+          },
+          vehicle: {
+            fuelType: rideGroupDoc.vehicleId.fuelType,
+            consumption: rideGroupDoc.vehicleId.consumption,
+            emissions: rideGroupDoc.vehicleId.emissions,
+            seats: rideGroupDoc.vehicleId.seats,
+            remainingSeats: remainingSeats
+          },
+          route: {
+            duration: rideGroupDoc.route.duration,
+            distance: rideGroupDoc.route.distance,
+            hasTolls: rideGroupDoc.route.hasTolls
+          },
+          applicationStatus: applicationStatus
+        })
+      }
+
+      // TODO Calculate the estimated ride cost based on distance, vehicle's fuel type and current fuel market price (part of delivery 2)
+
+      // Sort the response by distance and duration
+      // TODO Sort the response by estimated cost instead (part of delivery 2)
+      returnResponse.sort(function (a, b) {
+        if (a.route.distance &lt; b.route.distance) {
+          return -1
+        } else if (a.route.distance > b.route.distance) {
+          return 1
+        } else {
+          if (a.route.duration &lt; b.route.duration) {
+            return -1
+          } else if (a.route.duration > b.route.duration) {
+            return 1
+          } else {
+            return 0
+          }
+        }
+      })
+
+      res.status(200).send(returnResponse)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Get the next ride schedule details.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getRideScheduleNext (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Prepare find conditions for retrieving ride groups
+      const rideGroupFindConditions = {
+        isDisabled: false
+      }
+      switch (req.query.mode) {
+        case 'driver':
+          rideGroupFindConditions.driverId = userId
+          break
+        case 'passenger':
+          rideGroupFindConditions['passengers.' + userId] = { $exists: true }
+          break
+      }
+
+      // Retrieve ride groups
+      const rideGroupDocs = await RideGroupModel.find(rideGroupFindConditions, {
+        _id: true
+      })
+        .lean()
+        .exec()
+
+      // Calculate realization time for getting next ride schedule with a max delay defined by the respective environment variable
+      const nextRideScheduleMaxDateDuration = Duration.fromISO(process.env.RIDE_SCHEDULE_NEXT_MAX_DATE_VARIATION)
+      const currentDateTime = DateTime.utc()
+      const startDate = currentDateTime.minus(nextRideScheduleMaxDateDuration)
+      const endDate = currentDateTime.plus(nextRideScheduleMaxDateDuration)
+
+      // Prepare find conditions for retrieving ride schedules
+      const rideScheduleFindConditions = {
+        $and: [
+          {
+            $or: [
+              {
+                status: {
+                  $in: [
+                    RideScheduleModel.schema.statics.Status.WaitingPassengers,
+                    RideScheduleModel.schema.statics.Status.Started
+                  ]
+                }
+              },
+              {
+                realizationDate: {
+                  $gte: startDate.toJSDate(),
+                  $lte: endDate.toJSDate()
+                },
+                status: RideScheduleModel.schema.statics.Status.Scheduled
+              }
+            ]
+          }
+        ],
+        isDisabled: false
+      }
+      switch (req.query.mode) {
+        case 'driver':
+          rideScheduleFindConditions.rideGroupId = { $in: rideGroupDocs.map(v => v._id) }
+
+          break
+        case 'passenger':
+          rideScheduleFindConditions.$and.push({
+            $or: [
+              {
+                rideGroupId: { $in: rideGroupDocs.map(v => v._id) }
+              },
+              {
+                passengerRequests: {
+                  $elemMatch: {
+                    userId: userId,
+                    status: RideScheduleModel.schema.statics.PassengerRequestStatus.Accepted,
+                    isDisabled: false
+                  }
+                }
+              }
+            ]
+          })
+
+          break
+      }
+
+      // Retrieve ride schedules
+      const rideScheduleDoc = await RideScheduleModel.find(rideScheduleFindConditions, {
+        realizationDate: true,
+        status: true
+      })
+        .populate({
+          path: 'rideGroupId',
+          select: 'alias toDestination recurrent.expiration',
+          populate: [
+            { path: 'route' }
+          ]
+        })
+        .sort({
+          realizationDate: 1
+        })
+        .lean()
+        .map(docs => {
+          // // Ignore schedules after group expiring date
+          const doc = docs.find(doc => !doc.rideGroupId.recurrent || (doc.rideGroupId.recurrent &amp;&amp; DateTime.fromJSDate(doc.realizationDate) &lt; DateTime.fromJSDate(doc.rideGroupId.recurrent.expiration)))
+          if (!doc) return
+
+          // Prepare returning ride schedule details document
+          return {
+            id: doc._id,
+            rideGroupId: doc.rideGroupId._id,
+            alias: doc.rideGroupId.alias,
+            status: doc.status,
+            realizationDate: DateTime.fromJSDate(doc.realizationDate).toUTC().toISO(),
+            toDestination: doc.rideGroupId.toDestination,
+            route: {
+              summary: doc.rideGroupId.route.summary,
+              duration: doc.rideGroupId.route.duration,
+              distance: doc.rideGroupId.route.distance,
+              hasTolls: doc.rideGroupId.route.hasTolls,
+              startLocation: {
+                address: doc.rideGroupId.route.startLocation.address,
+                coordinates: {
+                  latitude: doc.rideGroupId.route.startLocation.point.coordinates[1],
+                  longitude: doc.rideGroupId.route.startLocation.point.coordinates[0]
+                }
+              },
+              endLocation: {
+                address: doc.rideGroupId.route.endLocation.address,
+                coordinates: {
+                  latitude: doc.rideGroupId.route.endLocation.point.coordinates[1],
+                  longitude: doc.rideGroupId.route.endLocation.point.coordinates[0]
+                }
+              },
+              polyline: doc.rideGroupId.route.polyline,
+              boundary: {
+                southwest: {
+                  latitude: doc.rideGroupId.route.boundary.southwest.coordinates[1],
+                  longitude: doc.rideGroupId.route.boundary.southwest.coordinates[0]
+                },
+                northeast: {
+                  latitude: doc.rideGroupId.route.boundary.northeast.coordinates[1],
+                  longitude: doc.rideGroupId.route.boundary.northeast.coordinates[0]
+                }
+              }
+            }
+          }
+        })
+        .exec()
+      if (!rideScheduleDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      res.status(200).send(rideScheduleDoc)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Get the specified ride schedule details.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getRideScheduleDetail (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve user's given rides rating average
+      const givenRidesRating = await RideHistoryModel.find({
+        driverId: userId
+      }, {
+        passengers: 1
+      })
+        .lean()
+        .exec()
+        .then(function (docs) {
+          const givenRidesData = {
+            ratingSum: 0,
+            ratingCount: 0
+          }
+
+          for (const givenRide of docs) {
+            if (!givenRide.passengers) continue
+
+            for (const passenger of Object.values(givenRide.passengers)) {
+              if (!passenger.rating) continue
+
+              givenRidesData.ratingSum += passenger.rating.rating
+              ++givenRidesData.ratingCount
+            }
+          }
+
+          return givenRidesData
+        })
+
+      // Retrieve specified ride schedule document
+      const rideScheduleDoc = await RideScheduleModel.findOne({
+        _id: req.params.scheduleId,
+        isDisabled: false
+      }, {
+        realizationDate: true,
+        'passengerRequests.handlingDate': true,
+        'passengerRequests.status': true,
+        'passengerRequests.isDisabled': true,
+        confirmedPassengers: true,
+        status: true
+      })
+        .populate({
+          path: 'rideGroupId',
+          select: 'alias passengers recurrent toDestination avoidTolls',
+          populate: [
+            { path: 'driverId', select: 'givenName surname avatar title' },
+            { path: 'vehicleId', select: 'alias fuelType consumption emissions seats' },
+            { path: 'passengers.$*.userId', select: 'givenName surname avatar' },
+            { path: 'route' }
+          ]
+        })
+        .populate('passengerRequests.userId', 'givenName surname avatar')
+        .lean({ virtuals: true })
+        .map(doc => {
+          if (!doc) return
+
+          // Ignore schedules after group expiring date
+          if (doc.rideGroupId.recurrent &amp;&amp; DateTime.fromJSDate(doc.realizationDate) >= DateTime.fromJSDate(doc.rideGroupId.recurrent.expiration)) return
+
+          const passengers = {}
+
+          // Handle ride group passengers
+          for (const passenger of Object.values(doc.rideGroupId.passengers)) {
+            passengers[passenger.userId._id] = {
+              id: passenger.userId._id,
+              name: passenger.userId.name,
+              avatar: passenger.userId.avatar ? {
+                fileName: passenger.userId.avatar.fileName,
+                mimeType: passenger.userId.avatar.mimeType
+              } : undefined,
+              status: -1,
+              confirmed: false
+            }
+          }
+
+          // Handle ride schedules pending or accepted passengers requests
+          for (const passenger of doc.passengerRequests) {
+            if (passenger.isDisabled === true ||
+              passenger.status === RideScheduleModel.schema.statics.PassengerRequestStatus.Rejected) {
+              continue
+            }
+
+            passengers[passenger.userId._id] = {
+              id: passenger.userId._id,
+              name: passenger.userId.name,
+              avatar: passenger.userId.avatar ? {
+                fileName: passenger.userId.avatar.fileName,
+                mimeType: passenger.userId.avatar.mimeType
+              } : undefined,
+              status: passenger.status,
+              handlingDate: passenger.handlingDate ? DateTime.fromJSDate(passenger.handlingDate).toUTC().toISO() : undefined,
+              confirmed: false
+            }
+          }
+
+          // Handle ride passengers confirmed attendance
+          if (doc.confirmedPassengers) {
+            for (const passengerId of Object.keys(doc.confirmedPassengers)) {
+              if (Object.prototype.hasOwnProperty.call(passengers, passengerId)) {
+                passengers[passengerId].confirmed = true
+              }
+            }
+          }
+
+          // Prepare returning ride schedule details document
+          const returnPassengers = Object.values(passengers)
+          const returnObject = {
+            id: doc._id,
+            rideGroupId: doc.rideGroupId._id,
+            alias: doc.rideGroupId.alias,
+            status: doc.status,
+            realizationDate: DateTime.fromJSDate(doc.realizationDate).toUTC().toISO(),
+            driver: {
+              id: doc.rideGroupId.driverId._id,
+              name: doc.rideGroupId.driverId.name,
+              title: doc.rideGroupId.driverId.title,
+              rating: givenRidesRating.ratingCount ? Math.round((givenRidesRating.ratingSum / givenRidesRating.ratingCount) * 2) / 2 : 0,
+              avatar: doc.rideGroupId.driverId.avatar ? {
+                fileName: doc.rideGroupId.driverId.avatar.fileName,
+                mimeType: doc.rideGroupId.driverId.avatar.mimeType
+              } : undefined
+            },
+            vehicle: {
+              id: doc.rideGroupId.vehicleId._id,
+              alias: req.query.mode === 'driver' &amp;&amp; doc.rideGroupId.driverId._id.equals(userId) ? doc.rideGroupId.vehicleId.alias : undefined,
+              fuelType: doc.rideGroupId.vehicleId.fuelType,
+              consumption: doc.rideGroupId.vehicleId.consumption,
+              emissions: doc.rideGroupId.vehicleId.emissions,
+              seats: doc.rideGroupId.vehicleId.seats,
+              remainingSeats: doc.rideGroupId.vehicleId.seats - returnPassengers.filter(v => v.status === RideScheduleModel.schema.statics.PassengerRequestStatus.Accepted || v.status === -1).length
+            },
+            passengers: returnPassengers,
+            toDestination: doc.rideGroupId.toDestination,
+            isRecurrent: !!doc.rideGroupId.recurrent,
+            route: {
+              summary: doc.rideGroupId.route.summary,
+              duration: doc.rideGroupId.route.duration,
+              distance: doc.rideGroupId.route.distance,
+              hasTolls: doc.rideGroupId.route.hasTolls,
+              startLocation: {
+                address: doc.rideGroupId.route.startLocation.address,
+                coordinates: {
+                  latitude: doc.rideGroupId.route.startLocation.point.coordinates[1],
+                  longitude: doc.rideGroupId.route.startLocation.point.coordinates[0]
+                }
+              },
+              endLocation: {
+                address: doc.rideGroupId.route.endLocation.address,
+                coordinates: {
+                  latitude: doc.rideGroupId.route.endLocation.point.coordinates[1],
+                  longitude: doc.rideGroupId.route.endLocation.point.coordinates[0]
+                }
+              },
+              polyline: doc.rideGroupId.route.polyline,
+              boundary: {
+                southwest: {
+                  latitude: doc.rideGroupId.route.boundary.southwest.coordinates[1],
+                  longitude: doc.rideGroupId.route.boundary.southwest.coordinates[0]
+                },
+                northeast: {
+                  latitude: doc.rideGroupId.route.boundary.northeast.coordinates[1],
+                  longitude: doc.rideGroupId.route.boundary.northeast.coordinates[0]
+                }
+              }
+            }
+          }
+          if (req.query.mode === 'passenger') {
+            returnObject.canApply = !Object.keys(passengers).includes(userId)
+          }
+          return returnObject
+        })
+        .exec()
+      if (!rideScheduleDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      res.status(StatusCodes.OK).send(rideScheduleDoc)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Disable the specified ride schedule.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async deleteRideSchedule (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve the ride schedule
+      const rideScheduleDoc = await RideScheduleModel.findOne({
+        _id: req.params.scheduleId,
+        status: RideScheduleModel.schema.statics.Status.Scheduled,
+        isDisabled: false
+      })
+        .populate('rideGroupId', 'driverId passengers')
+        .exec()
+      if (!rideScheduleDoc || !rideScheduleDoc.rideGroupId.driverId.equals(userId)) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Disable the ride schedule
+      rideScheduleDoc.isDisabled = true
+      await rideScheduleDoc.save()
+
+      // Handle ride group passengers and ride schedule accepted passengers requests
+      const passengers = []
+      for (const passenger of Object.keys(rideScheduleDoc.rideGroupId.passengers.keys())) {
+        passengers.push(passenger)
+      }
+      for (const passenger of rideScheduleDoc.passengerRequests) {
+        if (passenger.isDisabled === true ||
+              passenger.status === RideScheduleModel.schema.statics.PassengerRequestStatus.Rejected) {
+          continue
+        }
+
+        const passengerId = passenger.userId._id.toString()
+        if (passengers.indexOf(passengerId) === -1) {
+          passengers.push(passengerId)
+        }
+      }
+
+      // Notify the passengers that the ride schedule has been deleted
+      NotificationManager.sendAll(passengers, 'PASSENGER_RIDE_SCHEDULE_DELETED', {
+        RIDE_SCHEDULE_DATE: rideScheduleDoc.realizationDate
+      }, { rideScheduleId: rideScheduleDoc._id })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Request to join the specified ride schedule as a passenger.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async requestRideSchedule (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve user data
+      const userDoc = await UserModel.findById(userId, {
+        givenName: true,
+        surname: true
+      })
+        .lean({ virtuals: true })
+        .exec()
+
+      // Retrieve ride schedule
+      const rideScheduleDoc = await RideScheduleModel.findOne({
+        _id: req.params.scheduleId,
+        status: RideScheduleModel.schema.statics.Status.Scheduled,
+        isDisabled: false
+      })
+        .populate('rideGroupId', 'alias driverId')
+        .exec()
+      if (!rideScheduleDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Add the passenger request to the ride schedule
+      rideScheduleDoc.passengerRequests.push({
+        userId: userId
+      })
+      await rideScheduleDoc.save()
+
+      // Notify the driver that a new passenger request has been submitted
+      // TODO Add custom buttons to ACCEPT or REJECT
+      NotificationManager.send(rideScheduleDoc.rideGroupId.driverId, 'DRIVER_RIDE_SCHEDULE_PASSENGER_REQUEST', {
+        USER_NAME: userDoc.name,
+        RIDE_SCHEDULE_DATE: rideScheduleDoc.realizationDate,
+        RIDE_GROUP_ALIAS: rideScheduleDoc.rideGroupId.alias
+      })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Confirm the received passenger attendance on the specified ride schedule.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async rideScheduleConfirmPassengerAttendance (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve user data
+      const userDoc = await UserModel.findById(userId, {
+        givenName: true,
+        surname: true
+      })
+        .lean({ virtuals: true })
+        .exec()
+
+      // Retrieve ride schedule
+      const rideScheduleDoc = await RideScheduleModel.findOne({
+        _id: req.params.scheduleId,
+        status: RideScheduleModel.schema.statics.Status.Scheduled,
+        isDisabled: false
+      })
+        .populate('rideGroupId', 'alias driverId')
+        .exec()
+      if (!rideScheduleDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Confirm the passenger attendance
+      // NOTE: The checks for if the user is a passenger of the ride schedule or of the parent ride group are done at the model level
+      rideScheduleDoc.set('confirmedPassengers.' + userId, {
+        userId: userId
+      })
+      await rideScheduleDoc.save()
+
+      // Notify the driver that the passenger has confirmed his/her attendance to the ride schedule
+      NotificationManager.send(rideScheduleDoc.rideGroupId.driverId, 'DRIVER_RIDE_SCHEDULE_PASSENGER_ATTENDANCE_CONFIRMED', {
+        USER_NAME: userDoc.name,
+        RIDE_GROUP_ALIAS: rideScheduleDoc.rideGroupId.alias,
+        RIDE_SCHEDULE_DATE: rideScheduleDoc.realizationDate
+      }, { rideScheduleId: rideScheduleDoc._id })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Set the specified ride schedule status status to the given status.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async setRideScheduleStatus (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Start a mongodb transaction session
+      await mongoose.connection.transaction(async (session) => {
+        // Retrieve the ride schedule
+        const rideScheduleDoc = await RideScheduleModel.findOne({
+          _id: req.params.scheduleId,
+          isDisabled: false
+        })
+          .populate('rideGroupId', 'alias driverId vehicleId passengers route')
+          .session(session)
+          .exec()
+        if (!rideScheduleDoc || !rideScheduleDoc.rideGroupId.driverId.equals(userId)) {
+          throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+        }
+
+        // Check if the ride schedule status transition is valid
+        if (
+          (req.body.status === RideScheduleModel.schema.statics.Status.WaitingPassengers &amp;&amp;
+            rideScheduleDoc.status !== RideScheduleModel.schema.statics.Status.Scheduled) ||
+          (req.body.status === RideScheduleModel.schema.statics.Status.Started &amp;&amp;
+            rideScheduleDoc.status !== RideScheduleModel.schema.statics.Status.WaitingPassengers) ||
+          (req.body.status === RideScheduleModel.schema.statics.Status.Finished &amp;&amp;
+            rideScheduleDoc.status !== RideScheduleModel.schema.statics.Status.Started) ||
+          (req.body.status === RideScheduleModel.schema.statics.Status.Canceled &amp;&amp;
+            (rideScheduleDoc.status === RideScheduleModel.schema.statics.Status.Scheduled ||
+              rideScheduleDoc.status === RideScheduleModel.schema.statics.Status.Finished))
+        ) {
+          throw new ApiError('The status transition from ' + rideScheduleDoc.status + ' to ' + req.body.status + ' is invalid!', StatusCodes.UNPROCESSABLE_ENTITY) // TODO Use i18n
+        }
+
+        // Handle ride group passengers and ride schedule accepted passengers requests
+        const passengers = []
+        for (const passenger of Object.keys(rideScheduleDoc.rideGroupId.passengers.keys())) {
+          passengers.push(passenger)
+        }
+        for (const passenger of rideScheduleDoc.passengerRequests) {
+          if (passenger.isDisabled === true ||
+              passenger.status === RideScheduleModel.schema.statics.PassengerRequestStatus.Rejected) {
+            continue
+          }
+
+          const passengerId = passenger.userId._id.toString()
+          if (passengers.indexOf(passengerId) === -1) {
+            passengers.push(passengerId)
+          }
+        }
+
+        // Set the ride schedule status
+        rideScheduleDoc.status = req.body.status
+        await rideScheduleDoc.save()
+
+        // Execute the required actions for the next status
+        let rideHistoryDoc
+        switch (rideScheduleDoc.status) {
+          // If the new ride schedule status is waiting for passengers add the ride to the ride history
+          case RideScheduleModel.schema.statics.Status.WaitingPassengers:
+            rideHistoryDoc = new RideHistoryModel({
+              rideScheduleId: rideScheduleDoc._id,
+              driverId: rideScheduleDoc.rideGroupId.driverId,
+              vehicleId: rideScheduleDoc.rideGroupId.vehicleId,
+              expectedCost: 0.0, // TODO Calculate and set the expected cost for the ride (part of delivery 2)
+              route: rideScheduleDoc.rideGroupId.route // TODO Set the route selected by the user who started the ride (part of delivery 2)
+            })
+            await rideHistoryDoc.save({ session: session })
+            break
+          // If the new ride schedule status is waiting for passengers update the ride history with the passengers data
+          case RideScheduleModel.schema.statics.Status.Started:
+            // TODO Add the passengers that are present at the starting moment (part of delivery 2)
+            break
+          // If the new ride schedule status is finished update the ride history with the finishing data
+          case RideScheduleModel.schema.statics.Status.Finished:
+            rideHistoryDoc = await RideHistoryModel.findOne({
+              rideScheduleId: rideScheduleDoc._id
+            })
+              .session(session)
+              .exec()
+            if (!rideHistoryDoc) {
+              throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+            }
+            // rideHistoryDoc.realCost = 0.0 // TODO Calculate and set the real cost for the ride (part of delivery 2)
+            rideHistoryDoc.endDate = new Date()
+            await rideHistoryDoc.save()
+            break
+          case RideScheduleModel.schema.statics.Status.Canceled:
+            rideHistoryDoc = await RideHistoryModel.findOne({
+              rideScheduleId: rideScheduleDoc._id
+            })
+              .session(session)
+              .exec()
+            if (!rideHistoryDoc) break
+            rideHistoryDoc.isCanceled = true
+            await rideHistoryDoc.save()
+            break
+        }
+
+        // Notify the passengers of the new ride schedule status
+        NotificationManager.sendAll(passengers, 'PASSENGER_RIDE_SCHEDULE_STATUS_UPDATE', {
+          RIDE_SCHEDULE_DATE: rideScheduleDoc.realizationDate,
+          RIDE_GROUP_ALIAS: rideScheduleDoc.rideGroupId.alias,
+          RIDE_SCHEDULE_STATUS: rideScheduleDoc.status
+        }, { rideScheduleId: rideScheduleDoc._id })
+      })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Get all requests as either a driver or a passanger
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getRideScheduleRequests (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve user's given rides rating average
+      const givenRidesRating = await RideHistoryModel.find({
+        driverId: userId
+      }, {
+        passengers: 1
+      })
+        .lean()
+        .exec()
+        .then(function (docs) {
+          const givenRidesData = {
+            ratingSum: 0,
+            ratingCount: 0
+          }
+
+          for (const givenRide of docs) {
+            if (!givenRide.passengers) continue
+
+            for (const passenger of Object.values(givenRide.passengers)) {
+              if (!passenger.rating) continue
+
+              givenRidesData.ratingSum += passenger.rating.rating
+              ++givenRidesData.ratingCount
+            }
+          }
+
+          return givenRidesData
+        })
+
+      const findWhere = { isDisabled: false }
+
+      if (req.query.mode === 'passenger') {
+        findWhere['passengerRequests.userId'] = userId
+      } else {
+        findWhere.passengerRequests = { $exists: true, $not: { $size: 0 } }
+      }
+
+      // Retrieve ride schedule
+      const rideScheduleDocs = await RideScheduleModel.find(findWhere, {
+        passengerRequests: true,
+        rideGroupId: true,
+        status: true
+      })
+        .populate({
+          path: 'rideGroupId',
+          select: 'alias driverId',
+          populate: {
+            path: 'driverId'
+
+          }
+        })
+        .populate({
+          path: 'passengerRequests',
+          select: '_id userId status',
+          populate: {
+            path: 'userId',
+            select: '_id givenName surname title avatar'
+          }
+        })
+        .lean({ virtuals: true })
+        .exec()
+
+      if (!rideScheduleDocs) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      let filteredDocs = rideScheduleDocs
+
+      if (req.query.mode === 'driver') {
+        filteredDocs = rideScheduleDocs.filter(doc => {
+          return doc.rideGroupId.driverId._id.equals(userId)
+        })
+      }
+
+      const rideRequests = []
+
+      filteredDocs.map(doc => {
+        const docDriver = doc.rideGroupId.driverId
+        // map passenger requests
+        doc.passengerRequests.map(p => {
+          if (req.query.mode === 'driver') {
+            rideRequests.push({
+              id: p._id,
+              scheduleId: doc._id,
+              groupId: doc.rideGroupId._id,
+              groupAlias: doc.rideGroupId.alias,
+              passenger: {
+                id: p.userId._id,
+                name: p.userId.name,
+                title: p.userId.title,
+
+                avatar: p.userId.avatar ? {
+                  fileName: p.userId.avatar.fileName,
+                  mimeType: p.userId.avatar.mimeType
+                } : undefined
+              },
+              status: p.status,
+              scheduleStatus: doc.status
+            })
+          } else {
+            rideRequests.push({
+              id: p._id,
+              scheduleId: doc._id,
+              groupId: doc.rideGroupId._id,
+              groupAlias: doc.rideGroupId.alias,
+              driver: { // return driver info if the user is a passenger
+                id: docDriver._id,
+                name: docDriver.name,
+                title: docDriver.title,
+                avatar: docDriver.avatar ? {
+                  fileName: docDriver.avatar.fileName,
+                  mimeType: docDriver.avatar.mimeType
+                } : undefined,
+                rating: givenRidesRating.ratingCount ? Math.round((givenRidesRating.ratingSum / givenRidesRating.ratingCount) * 2) / 2 : 0
+              },
+              status: p.status,
+              scheduleStatus: doc.status
+            })
+          }
+        })
+      })
+
+      // Send response to the user
+      res.status(StatusCodes.OK).send(rideRequests)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Request to join the specified ride schedule as a passenger.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async handleRideScheduleRequest (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+      // Set requesting passenger's Id
+      const passengerId = req.params.passengerId
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve ride schedule
+      const rideScheduleDoc = await RideScheduleModel.findOne({
+        _id: req.params.scheduleId,
+        'passengerRequests.userId': passengerId,
+        status: RideScheduleModel.schema.statics.Status.Scheduled,
+        isDisabled: false
+      })
+        .populate({
+          path: 'rideGroupId',
+          select: 'alias driverId'
+        })
+        .lean()
+        .exec()
+
+      if (!rideScheduleDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // check if requesting user is the driver of the schedule in question
+      if (!rideScheduleDoc.rideGroupId.driverId.equals(userId)) {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // set the target ride request
+      const rideRequest = rideScheduleDoc.passengerRequests.filter(p => p.userId.equals(passengerId))[0]
+      // check if schedule is on pending, throw eror if it isn't
+      if (rideRequest.status !== RideScheduleModel.schema.statics.PassengerRequestStatus.Pending) {
+        throw new ApiError('Ride request is no longer pending!', StatusCodes.CONFLICT)
+      }
+
+      if (req.query.operation === 'accept') {
+        // set the passenger object to add to the confirmed ones
+        const confirmedPassenger = {
+          userId: new mongoose.Types.ObjectId(passengerId)
+        }
+
+        // set the request status as accepted and add the passenger to the confirmmed passengers array
+        await RideScheduleModel.updateOne({ _id: req.params.scheduleId, 'passengerRequests.userId': passengerId },
+          {
+            'passengerRequests.$.status': RideScheduleModel.schema.statics.PassengerRequestStatus.Accepted,
+            $push: { confirmedPassengers: confirmedPassenger }
+          }).exec()
+
+        // Notify the passenger that their request was accepted
+        NotificationManager.send(passengerId, 'PASSENGER_RIDE_REQUEST_ACCEPTED', {
+          RIDE_SCHEDULE_DATE: rideScheduleDoc.realizationDate,
+          RIDE_GROUP_ALIAS: rideScheduleDoc.rideGroupId.alias
+        })
+      }
+
+      if (req.query.operation === 'reject') {
+        // set the ride request status as rejected
+        await RideScheduleModel.updateOne({ _id: req.params.scheduleId, 'passengerRequests.userId': passengerId },
+          {
+            'passengerRequests.$.status': RideScheduleModel.schema.statics.PassengerRequestStatus.Rejected
+
+          }).exec()
+
+        // Notify the passenger that their request was accepted
+        NotificationManager.send(passengerId, 'PASSENGER_RIDE_REQUEST_REFUSED', {
+          RIDE_SCHEDULE_DATE: rideScheduleDoc.realizationDate,
+          RIDE_GROUP_ALIAS: rideScheduleDoc.rideGroupId.alias
+        })
+      }
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

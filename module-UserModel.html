@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> UserModel</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>UserModel</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+            
+
+
+    
+    <h4 class="name" id="module:UserModel">
+        <a class="href-link" href="#module:UserModel">#</a>
+        
+        <span class="code-name">
+            
+                module:UserModel<span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        The data-layer for a user.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_user.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_user.js.html">src/models/user.js</a>, <a href="src_models_user.js.html#line169">line 169</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Example usage of User model.</p>
+    
+    
+        <pre class="prettyprint"><code>let user1 = new User({  aadId: '5f5a506c305ff6bd4475h3s6',  name: 'User1',  surname: 'Surname1',  title: 'Student',  email: 'user1@email.com',  avatar: {    fileName: '2593ee56cc8f8bb16f13995e4f18b746',    originalName: 'WIN_20200729_09_52_41_Pro.jpg',    mimeType: 'image/jpeg',    size: 121976  },  vehicles: [    mongoose.Types.ObjectId('5f5a506c305ff6bd4475b1d1'),    mongoose.Types.ObjectId('5f5a506fc35e608a4832f569')  ],  level: 4,  experience: 2342,  blockedUsers: {    '5f5b444fb804793cf3faed87': {      userId: mongoose.Types.ObjectId('5f5b444fb804793cf3faed87')    }  }});</code></pre>
+    
+
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">mongoose.Schema</span>
+
+
+    </span>
+
+<h4 class="name" id="~BlockedUserSchema">
+    <a class="href-link" href="#~BlockedUserSchema">#</a>
+    
+        
+            <span class='tag'>inner</span>
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        BlockedUserSchema
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Blocked user nested schema.
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>userId</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">mongoose.ObjectId</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last">Blocked user ObjectId.</td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_user.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_user.js.html">src/models/user.js</a>, <a href="src_models_user.js.html#line36">line 36</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">mongoose.Schema</span>
+
+
+    </span>
+
+<h4 class="name" id="~UserSchema">
+    <a class="href-link" href="#~UserSchema">#</a>
+    
+        
+            <span class='tag'>inner</span>
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        UserSchema
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    User schema.
+</div>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>aadId</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User azure active directory unique id.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>givenName</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User given name.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>surname</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User surname.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>title</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User job title.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>email</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User email.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>avatar</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User avatar.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>locale</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User locale.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>fcmToken</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">string</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User Firebase Cloud Messaging token.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>vehicles</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Array.&lt;mongoose.ObjectId></span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User vehicles.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>level</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User level.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>experience</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User experience.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>blockedUsers</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">Map.&lt;BlockedUserSchema></span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User's blocked users.</td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>isDisabled</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">boolean</span>
+
+
+    
+    </td>
+
+    
+        <td class="attributes">
+        
+            &lt;optional><br>
+        
+
+        
+        </td>
+    
+
+    
+
+    <td class="description last">User status (true if deleted).</td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_models_user.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_models_user.js.html">src/models/user.js</a>, <a href="src_models_user.js.html#line75">line 75</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

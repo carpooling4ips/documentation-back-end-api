@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> src/controllers/user/user.profile.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/controllers/user/user.profile.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module UserProfileController
+ * @category Controllers
+ */
+
+'use strict'
+
+/*
+ * ==================================================
+ * | Imports                                        |
+ * ==================================================
+ */
+import express from 'express'
+import expressValidator from 'express-validator'
+import HttpStatus from 'http-status-codes'
+import luxon from 'luxon'
+import path from 'path'
+import fs from 'fs-extra'
+import debug from 'debug'
+
+import ApiError from '../../utils/apiError.js'
+
+// Models
+import { UserModel, RideHistoryModel } from '../../models/index.js'
+
+/*
+ * ==================================================
+ * | Constants                                      |
+ * ==================================================
+ */
+const { checkSchema, validationResult } = expressValidator
+const { ReasonPhrases, StatusCodes } = HttpStatus
+const { DateTime } = luxon
+
+// Debug package
+const debugApp = debug('carpooling4ips')
+const debugFS = debugApp.extend('fs')
+
+/*
+ * ==================================================
+ * | Exports                                        |
+ * ==================================================
+ */
+
+/**
+ * Class representing the user's profile controller.
+ *
+ * @category Controllers
+ */
+export default class {
+  /*
+  * ==================================================
+  * | Public validation functions                    |
+  * ==================================================
+  */
+
+  /**
+   * Validate edit profile avatar route input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateEditProfileAvatar () {
+    return [
+      checkSchema({
+        avatar: {
+          in: ['body'],
+          custom: {
+            options: (value, { req, location, path }) => {
+              return !!req.file
+            },
+            errorMessage: 'You should upload at least one avatar image file up to 1Mb' // TODO Use i18n
+          }
+        }
+      })
+    ]
+  }
+
+  /*
+  * ==================================================
+  * | Public route functions                         |
+  * ==================================================
+  */
+
+  /**
+   * Get specified user's profile data.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getProfile (req, res, next) {
+    try {
+      // Set request user's id
+      const userId = req.params.user === 'me' ? req.user : req.params.user
+
+      // Retrieve the user data from database
+      const promiseUser = UserModel.findOne({
+        _id: userId,
+        isSuspended: false,
+        isDisabled: false
+      })
+        .lean({ virtuals: true })
+        .exec()
+        .then(function (doc) {
+          if (!doc) {
+            throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+          }
+
+          return doc
+        })
+
+      // Retrieve user's asked rides count
+      const promiseAskedRides = RideHistoryModel.countDocuments({
+        ['passengers.' + userId]: { $exists: true }
+      }).exec().then(function (count) {
+        return count
+      })
+
+      // Retrieve user's given rides and process rating average and comments
+      const promiseGivenRides = RideHistoryModel.find({
+        driverId: userId
+      }, {
+        passengers: 1
+      })
+        .lean()
+        .exec()
+        .then(function (docs) {
+          const givenRidesData = {
+            count: docs.length,
+            ratingSum: 0,
+            ratingCount: 0,
+            comments: []
+          }
+
+          for (const givenRide of docs) {
+            if (!givenRide.passengers) continue
+
+            for (const passenger of Object.values(givenRide.passengers)) {
+              if (!passenger.rating) continue
+
+              givenRidesData.ratingSum += passenger.rating.rating
+              ++givenRidesData.ratingCount
+
+              if (passenger.rating.comment) {
+                givenRidesData.comments.push({
+                  text: passenger.rating.comment,
+                  date: DateTime.fromJSDate(passenger.rating.createdAt).toUTC().toISO()
+                })
+              }
+            }
+          }
+
+          return givenRidesData
+        })
+
+      // Retrieve if logged-in user blocked retrieving user
+      let promiseIsBlocked
+      if (req.user !== userId) {
+        promiseIsBlocked = UserModel.countDocuments({
+          _id: req.user,
+          ['blockedUsers.' + userId]: { $exists: true },
+          isSuspended: false,
+          isDisabled: false
+        }).exec().then(function (count) {
+          return !!count
+        })
+      }
+
+      // Execute promises
+      const [userDoc, askedRidesCount, givenRidesData, isBlocked] = await Promise.all([promiseUser, promiseAskedRides, promiseGivenRides, promiseIsBlocked])
+
+      // Return user's profile data
+      const userProfile = {
+        name: userDoc.name,
+        title: userDoc.title,
+        avatar: userDoc.avatar,
+        rating: givenRidesData.ratingCount ? Math.round((givenRidesData.ratingSum / givenRidesData.ratingCount) * 2) / 2 : 0,
+        ratingCount: givenRidesData.ratingCount,
+        askedRides: askedRidesCount,
+        givenRides: givenRidesData.count,
+        totalAchievements: 0, // TODO Add total achievements
+        comments: givenRidesData.comments,
+        isBlocked: isBlocked
+      }
+      res.status(StatusCodes.OK).send(userProfile)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Edit specified user's profile avatar image.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async editProfileAvatar (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Set update query
+      const update = {
+        avatar: {
+          fileName: req.file.filename,
+          originalName: req.file.originalname,
+          mimeType: req.file.mimetype,
+          size: req.file.size
+        }
+      }
+
+      // Update document on the database
+      const doc = await UserModel.findOneAndUpdate({
+        _id: userId,
+        isSuspended: false,
+        isDisabled: false
+      }, update, { runValidators: true })
+      if (!doc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Remove old image file
+      if (doc.avatar &amp;&amp; doc.avatar.fileName) {
+        const oldFilePath = path.join(process.env.UPLOADS_FOLDER_PATH, doc.avatar.fileName)
+        fs.remove(oldFilePath)
+          .then(function () {
+            debugFS('The file \'%s\' has been removed from the file system.', oldFilePath)
+          })
+          .catch(function (err) {
+            debugFS(err)
+          })
+      }
+
+      // Send operation response
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

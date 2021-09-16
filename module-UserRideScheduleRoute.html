@@ -1,0 +1,2824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> UserRideScheduleRoute</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>UserRideScheduleRoute</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+            
+
+
+    
+    <h4 class="name" id="module:UserRideScheduleRoute">
+        <a class="href-link" href="#module:UserRideScheduleRoute">#</a>
+        
+        <span class="code-name">
+            
+                module:UserRideScheduleRoute<span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        The router-layer of the user's ride schedule.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line513">line 513</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="RideHandleaPassenger'sRideRequest">
+    <a class="href-link" href="#RideHandleaPassenger'sRideRequest">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Handle a Passenger's Ride Request
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">POST</td>
+                            <td class="name last">/user/:user/rideSchedule/:scheduleId/:passengerId/handle</td>
+                            </tr>
+                            </table>
+                            Handle a ride schedule request.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Query Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">operation</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Specifies the operation to execute. Possible values: accept, refuse.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr><tr>
+            <td class="name">:rideSchedule</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Id of the ride schedule in question.</td>
+          </tr><tr>
+            <td class="name">:passengerId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Id of the passanger that made the request.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">204</td>
+            
+            
+            <td class="description last">The request handling succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission or the user is not ride schedules driver.</td>
+          </tr><tr>
+            
+            <td class="type">409</td>
+            
+            
+            <td class="description last">The passenger's request is no longer on a pending state.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line276">line 276</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Possible request:</p>
+    
+    
+        <pre class="prettyprint"><code>http://127.0.0.1:2450/api/user/me/rideSchedule/:scheduleId/handle</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleConfirmPassengerAttendance">
+    <a class="href-link" href="#RideScheduleConfirmPassengerAttendance">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Confirm Passenger Attendance
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">POST</td>
+                            <td class="name last">/user/:user/rideSchedule/:scheduleId/confirmAttendance</td>
+                            </tr>
+                            </table>
+                            Confirm passenger attendance on the specified ride schedule.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr><tr>
+            <td class="name">:scheduleId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id of the affecting ride schedule.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">204</td>
+            
+            
+            <td class="description last">The passenger attendance confirmation to the ride schedule succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">404</td>
+            
+            
+            <td class="description last">The requested schedule id for the specified user id does not exist.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line473">line 473</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleDelete">
+    <a class="href-link" href="#RideScheduleDelete">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Delete
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">DELETE</td>
+                            <td class="name last">/user/:user/rideSchedule/:scheduleId</td>
+                            </tr>
+                            </table>
+                            Delete specified ride schedule.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr><tr>
+            <td class="name">:scheduleId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id of the deleting ride schedule.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">204</td>
+            
+            
+            <td class="description last">The ride schedule deletion succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">404</td>
+            
+            
+            <td class="description last">The requested schedule id for the specified user id does not exist.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line437">line 437</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleGetAll">
+    <a class="href-link" href="#RideScheduleGetAll">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Get All
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">GET</td>
+                            <td class="name last">/user/:user/rideSchedule</td>
+                            </tr>
+                            </table>
+                            Get all user's ride schedules.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Query Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Attributes</th>
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">mode</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">Specifies if retrieving user's ride schedules as a driver or as a passenger. Possible values: driver, passenger.</td>
+          </tr><tr>
+            <td class="name">week</td>
+            <td class="type">number</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">Specifies the week number of the week year to retrieve the ride schedules. Possible values: 1-53. At least one week or month must be specified, if both specified, the month take precedence.</td>
+          </tr><tr>
+            <td class="name">month</td>
+            <td class="type">number</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">Specifies the month number to retrieve the ride schedules. Possible values: 1-12. At least one week or month must be specified, if both specified, the month take precedence.</td>
+          </tr><tr>
+            <td class="name">year</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">Specifies year number to retrieve the ride schedules.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr>
+          </table>
+                            <h5>Response:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">id</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id.</td>
+          </tr><tr>
+            <td class="name">alias</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's alias</td>
+          </tr><tr>
+            <td class="name">realizationDate</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's realization date (iso 8601 format).</td>
+          </tr><tr>
+            <td class="name">status</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule's status. Possible values: 1 (schedule), 2 (waiting for passengers), 3 (started), 4 (finished), 5 (canceled).</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">200</td>
+            
+            
+            <td class="description last">The user's ride schedules retrieval succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line34">line 34</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Possible request:</p>
+    
+    
+        <pre class="prettyprint"><code>http://127.0.0.1:2450/api/user/me/rideSchedule?mode=driver&amp;month=11&amp;year=2020</code></pre>
+    
+
+        <p class="code-caption">Possible output:</p>
+    
+    
+        <pre class="prettyprint"><code>[  {    "id": "5fa2a0c8481a0e3bd017c21d",    "alias": "Test 2",    "realizationDate": "2020-11-05T13:30:00.000Z",    "status": 1  }]</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleGetAlluserrequests">
+    <a class="href-link" href="#RideScheduleGetAlluserrequests">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Get All user requests
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">GET</td>
+                            <td class="name last">/user/:user/rideSchedule/request</td>
+                            </tr>
+                            </table>
+                            Get all user's ride schedule requests.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Query Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">mode</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Specifies if retrieving user's ride schedules as a driver or as a passenger. Possible values: driver, passenger.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr>
+          </table>
+                            <h5>Response:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">id</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The request's id.</td>
+          </tr><tr>
+            <td class="name">scheduleId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id</td>
+          </tr><tr>
+            <td class="name">groupAlias</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's group alias.</td>
+          </tr><tr>
+            <td class="name">passenger</td>
+            <td class="type">object</td>
+            
+            
+            <td class="description last">The data of the passenger requesting the ride</td>
+          </tr><tr>
+            <td class="name">driver</td>
+            <td class="type">object</td>
+            
+            
+            <td class="description last">The data of the driver offering the ride</td>
+          </tr><tr>
+            <td class="name">status</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule's status. Possible values: 1 (schedule), 2 (waiting for passengers), 3 (started), 4 (finished), 5 (canceled).</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">200</td>
+            
+            
+            <td class="description last">The user's ride schedules retrieval succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line214">line 214</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Possible request:</p>
+    
+    
+        <pre class="prettyprint"><code>http://127.0.0.1:2450/api/user/me/rideSchedule/request</code></pre>
+    
+
+        <p class="code-caption">Possible output as a driver:</p>
+    
+    
+        <pre class="prettyprint"><code>[     {          "id": "5f9ab8387ad1583b1833f799",          "scheduleId": "5f9ab8387ad1583b1833f79b",          "groupAlias": "adqaqwssswdw",          "groupId": "5f9abc9736c78b3134689efd",          "passenger": {              "id": "5f918a6b75975c50841391fc",              "name": "Edgar Santos",              "title": "Estudante",              "avatar": {                  "fileName": "3229c0fae86ecf38929161777824f5c5",                  "mimeType": "image/jpeg"              }        },          "status": 1      }  ]</code></pre>
+    
+
+        <p class="code-caption">Possible output as a passenger:</p>
+    
+    
+        <pre class="prettyprint"><code>[     {          "id": "5f9ab8387ad1583b1833f799",          "groupId": "5f9abc9736c78b3134689efd",          "groupAlias": "adqaqwssswdw",          "driver": {              "id": "5f918a6b75975c50841391fc",              "name": "Edgar Santos",              "title": "Estudante",              "avatar": {                  "fileName": "3229c0fae86ecf38929161777824f5c5",                  "mimeType": "image/jpeg"              }        },          "status": 1      }  ]</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleGetId">
+    <a class="href-link" href="#RideScheduleGetId">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Get Id
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">GET</td>
+                            <td class="name last">/user/:user/rideSchedule/:scheduleId</td>
+                            </tr>
+                            </table>
+                            Get specified ride schedule details.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Query Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">mode</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Specifies if retrieving user's ride schedule as a driver or as a passenger. Possible values: driver, passenger.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr><tr>
+            <td class="name">:scheduleId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id of the retrieving ride schedule.</td>
+          </tr>
+          </table>
+                            <h5>Response:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Attributes</th>
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">id</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's id.</td>
+          </tr><tr>
+            <td class="name">alias</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's ride group alias.</td>
+          </tr><tr>
+            <td class="name">status</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's status.</td>
+          </tr><tr>
+            <td class="name">rideGroupId</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's ride group id.</td>
+          </tr><tr>
+            <td class="name">realizationDate</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's realization date (iso 8601 format).</td>
+          </tr><tr>
+            <td class="name">driver.id</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule driver's id.</td>
+          </tr><tr>
+            <td class="name">driver.name</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule driver's name.</td>
+          </tr><tr>
+            <td class="name">driver.avatar.fileName</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule driver's avatar file name on the server.</td>
+          </tr><tr>
+            <td class="name">driver.avatar.mimeType</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule driver's avatar file mime type.</td>
+          </tr><tr>
+            <td class="name">vehicle.id</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's id.</td>
+          </tr><tr>
+            <td class="name">vehicle.alias</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's alias. Visible only when mode is driver.</td>
+          </tr><tr>
+            <td class="name">vehicle.fuelType</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's fuel type. Possible values: 1 (Gasoline), 2 (Diesel), 3 (Gpl), 4 (Electric).</td>
+          </tr><tr>
+            <td class="name">vehicle.consumption</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's consumption in l/100 km or kWh/100 km..</td>
+          </tr><tr>
+            <td class="name">vehicle.emissions</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's CO2 emissions in g/km.</td>
+          </tr><tr>
+            <td class="name">vehicle.seats</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's seats.</td>
+          </tr><tr>
+            <td class="name">vehicle.remainingSeats</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's remaining seats.</td>
+          </tr><tr>
+            <td class="name">passengers[].id</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule passenger's id.</td>
+          </tr><tr>
+            <td class="name">passengers[].name</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule passenger's name.</td>
+          </tr><tr>
+            <td class="name">passengers[].avatar.fileName</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule passenger's avatar file name on the server.</td>
+          </tr><tr>
+            <td class="name">passengers[].avatar.mimeType</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule passenger's avatar file mime type.</td>
+          </tr><tr>
+            <td class="name">passengers[].status</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule passenger's status. Possible values: -1 (part of the ride group), 1 (pending), 2 (accepted).</td>
+          </tr><tr>
+            <td class="name">passengers[].handlingDate</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule passenger's status handling date (iso 8601 format). Not applicable to passengers from the ride group.</td>
+          </tr><tr>
+            <td class="name">passengers[].confirmed</td>
+            <td class="type">boolean</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule passenger's attendance confirmed.</td>
+          </tr><tr>
+            <td class="name">toDestination</td>
+            <td class="type">boolean</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">If the ride schedule is to or from destination.</td>
+          </tr><tr>
+            <td class="name">isRecurrent</td>
+            <td class="type">boolean</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">If the ride schedule is recurrent.</td>
+          </tr><tr>
+            <td class="name">route.summary</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's summary.</td>
+          </tr><tr>
+            <td class="name">route.duration</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's duration.</td>
+          </tr><tr>
+            <td class="name">route.distance</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's distance.</td>
+          </tr><tr>
+            <td class="name">route.hasTolls</td>
+            <td class="type">boolean</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">If the ride schedule route's has tools.</td>
+          </tr><tr>
+            <td class="name">route.startLocation.address</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's start location address.</td>
+          </tr><tr>
+            <td class="name">route.startLocation.coordinates.latitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's start location latitude.</td>
+          </tr><tr>
+            <td class="name">route.startLocation.coordinates.longitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's start location longitude.</td>
+          </tr><tr>
+            <td class="name">route.endLocation.address</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's end location address.</td>
+          </tr><tr>
+            <td class="name">route.endLocation.coordinates.latitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's end location latitude.</td>
+          </tr><tr>
+            <td class="name">route.endLocation.coordinates.longitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's end location longitude.</td>
+          </tr><tr>
+            <td class="name">route.polyline</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's google maps polyline.</td>
+          </tr><tr>
+            <td class="name">route.boundary.southwest.latitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's southwest boundary latitude.</td>
+          </tr><tr>
+            <td class="name">route.boundary.southwest.longitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's southwest boundary longitude.</td>
+          </tr><tr>
+            <td class="name">route.boundary.northeast.latitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's northeast boundary latitude.</td>
+          </tr><tr>
+            <td class="name">route.boundary.northeast.longitude</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's northeast boundary longitude.</td>
+          </tr><tr>
+            <td class="name">canApply</td>
+            <td class="type">boolean</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">If the user can request to participate as a passenger on the ride schedule. Visible only when mode is passenger.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">200</td>
+            
+            
+            <td class="description last">The user's ride schedule retrieval succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">404</td>
+            
+            
+            <td class="description last">The requested schedule id for the specified user id does not exist.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line298">line 298</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Possible request:</p>
+    
+    
+        <pre class="prettyprint"><code>http://127.0.0.1:2450/api/user/me/rideSchedule/5fa91f5fec1dd40bb41dcaf7?mode=driver</code></pre>
+    
+
+        <p class="code-caption">Possible output with mode as driver:</p>
+    
+    
+        <pre class="prettyprint"><code>{  "id": "5fa91f5fec1dd40bb41dcaf7",  "rideGroupId": "5fa91f5fec1dd40bb41dcaf6",  "alias": "Test 20",  "status": 1,  "realizationDate": "2020-11-10T14:30:15.000Z",  "driver": {    "id": "5f918a6b75975c50841391fc",    "name": "Edgar Santos",    "avatar": {      "fileName": "3229c0fae86ecf38929161777824f5c5",      "mimeType": "image/jpeg"    }  },  "vehicle": {    "id": "5f7c7476ba695503f0845454",    "alias": "Vehicle 1",    "fuelType": 1,    "consumption": 12,    "emissions": 24,    "seats": 5,    "remainingSeats": 3  },  "passengers": [    {      "id": "5f96b926fc19780d3848ce33",      "name": "Henoch Vitureira",      "status": 2,      "handlingDate": "2020-11-17T13:30:00.000Z",      "confirmed": true    },    {      "id": "5f96b926fc19780d3848ce34",      "name": "Rui Madeira",      "avatar": {        "fileName": "3229c0fae86ecf38929161777824f5c6",        "mimeType": "image/jpeg"      },      "status": -1,      "confirmed": false    }  ],  "toDestination": true,  "isRecurrent": false,  "route": {    "summary": "A12",    "duration": 2767,    "distance": 67534,    "hasTolls": true,    "startLocation": {      "address": "R. Afonso Porfírio 1, 2665-506 Venda do Pinheiro, Portugal",      "coordinates": {        "latitude": 38.9173716,        "longitude": -9.2232405      }    },    "endLocation": {      "address": "Campus do IPS - Estefanilha, 2910-761 Setúbal, Portugal",      "coordinates": {        "latitude": 38.5221095,        "longitude": -8.838884499999999      }    },    "polyline": "q`plFflhw@f@d@W_DcAyHx@E~@_DdEyHjAmC`@cAd@i@dAwJ~AyIjA",    "boundary": {      "southwest": {        "latitude": 38.5216333,        "longitude": -9.223433199999999      },      "northeast": {        "latitude": 38.9176332,        "longitude": -8.8376208      }    }  }}</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleGetNext">
+    <a class="href-link" href="#RideScheduleGetNext">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Get Next
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">GET</td>
+                            <td class="name last">/user/:user/rideSchedule/next</td>
+                            </tr>
+                            </table>
+                            Get user's next ride schedule.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Query Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">mode</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Specifies if retrieving user's ride schedule as a driver or as a passenger. Possible values: driver, passenger.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr>
+          </table>
+                            <h5>Response:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">id</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id.</td>
+          </tr><tr>
+            <td class="name">rideGroupId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's ride group id.</td>
+          </tr><tr>
+            <td class="name">alias</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's ride group alias.</td>
+          </tr><tr>
+            <td class="name">status</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's status.</td>
+          </tr><tr>
+            <td class="name">realizationDate</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's realization date (iso 8601 format).</td>
+          </tr><tr>
+            <td class="name">toDestination</td>
+            <td class="type">boolean</td>
+            
+            
+            <td class="description last">If the ride schedule is to or from destination.</td>
+          </tr><tr>
+            <td class="name">route.summary</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule route's summary.</td>
+          </tr><tr>
+            <td class="name">route.duration</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's duration.</td>
+          </tr><tr>
+            <td class="name">route.distance</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's distance.</td>
+          </tr><tr>
+            <td class="name">route.hasTolls</td>
+            <td class="type">boolean</td>
+            
+            
+            <td class="description last">If the ride schedule route's has tools.</td>
+          </tr><tr>
+            <td class="name">route.startLocation.address</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule route's start location address.</td>
+          </tr><tr>
+            <td class="name">route.startLocation.coordinates.latitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's start location latitude.</td>
+          </tr><tr>
+            <td class="name">route.startLocation.coordinates.longitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's start location longitude.</td>
+          </tr><tr>
+            <td class="name">route.endLocation.address</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule route's end location address.</td>
+          </tr><tr>
+            <td class="name">route.endLocation.coordinates.latitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's end location latitude.</td>
+          </tr><tr>
+            <td class="name">route.endLocation.coordinates.longitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's end location longitude.</td>
+          </tr><tr>
+            <td class="name">route.polyline</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule route's google maps polyline.</td>
+          </tr><tr>
+            <td class="name">route.boundary.southwest.latitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's southwest boundary latitude.</td>
+          </tr><tr>
+            <td class="name">route.boundary.southwest.longitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's southwest boundary longitude.</td>
+          </tr><tr>
+            <td class="name">route.boundary.northeast.latitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's northeast boundary latitude.</td>
+          </tr><tr>
+            <td class="name">route.boundary.northeast.longitude</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The ride schedule route's northeast boundary longitude.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">200</td>
+            
+            
+            <td class="description last">The user's next ride schedule retrieval succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">404</td>
+            
+            
+            <td class="description last">The user does not have an active or future ride schedule for the near time.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line133">line 133</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Possible request:</p>
+    
+    
+        <pre class="prettyprint"><code>http://127.0.0.1:2450/api/user/me/rideSchedule/next?mode=driver</code></pre>
+    
+
+        <p class="code-caption">Possible output with mode as driver:</p>
+    
+    
+        <pre class="prettyprint"><code>{  "id": "5ff12e97949c34545059e635",  "rideGroupId": "5ff12e97949c34545059e634",  "alias": "Test A",  "status": 1,  "realizationDate": "2021-01-03T02:55:00.000Z",  "toDestination": true,  "route": {    "summary": "A12",    "duration": 2767,    "distance": 67534,    "hasTolls": true,    "startLocation": {      "address": "R. Afonso Porfírio 1, 2665-506 Venda do Pinheiro, Portugal",      "coordinates": {        "latitude": 38.9173716,        "longitude": -9.2232405      }    },    "endLocation": {      "address": "Campus do IPS - Estefanilha, 2910-761 Setúbal, Portugal",      "coordinates": {        "latitude": 38.5221095,        "longitude": -8.838884499999999      }    },    "polyline": "q`plFflhw@f@d@W_DcAyHx@E~@_DdEyHjAmC`@cAd@i@dAwJ~AyIjA{S`@uHG_FiA}H{AmCa@qAHs@bCmCr@aGVoBnAwCxDqKfAyC~AaFj@Yh@H|@l@bDdCpAb@~CNvXkGjCAz@`@rAbCt@jC~@xENpCKhKd@`Dx@`B`@`Bc@pA}CjByMrFqC`@m@Mi@q@MqAX_Ab@]dDcAvHmCfG_EfJeKlEwEbJmFrHuD~EqD|G}DrEeAjDUjIc@pK[fIVvV|DrThGdUbKrIpEvCfApDp@nDNbEOxDu@nFqBlKeG~D}ClF}EtBsCzC}G`BoJv@ePfAmIpBmGnCmEbG}E`FeBbKuBtCiA|DuCfBmBxE_HfBwEzAgGtC{OvBuGzCqGnEiHdFmFtGsE|KmFjHmEdIgIpFiGpGsJvEaH`GiFbE}B~I}BfHq@dHQtFH`N|@tFFrIw@zFcBxGqDhEuDfC}C|EgIbFuIjEuErF_DhDeAhDa@|BEzAV`Cv@~AVbAa@x@oAzD{IlCmCfFeBpDW|FJrER`BZbAr@zAd@h@_@^yAqAoGIyCLqK^yH|AkPxBgM~CsOvCaSjCiSdB{GlFiIpE{GtEmMfCuJjAgChDgElQgLrIkG|HmJpCiFlBoFdAkGXqEo@iWiAyXIgQpBw`@rDgq@tA}QxAcLfDaQtCoKbIcTdIgOph@aw@teA}}Anx@elApsAopB`MmRdMqUpGuNzJeXnKo[dKu\\fDaRz@aIr@cMbBuc@pBqPzNcr@dKe_@xD}PbFi[~BqRXqFLgOc@yREwKX{Jj@wPE_Kw@iLiBsKwEoPoBuIkAiNFgKtAoMdD}KlFmJlOcRbMoNpGwEbImDxIuBj[{G|LsD|MeFxd@_Q`XyJ~c@uPxJwCpJ_BzGe@fGKnv@hCpM^|IZbEMhEi@jJ{CzLmEvH_EtR_MdTaNjLyI|HmI`IoLbMkXhKkVnCwFrEeH~ImJdLkH~HwClJmBnKc@~J`@h^bE|Rn@fOMda@oBliA{Fve@eCrIsAhEaBpBk@`EiBlD_AlEQrJ`ArGHnIeA`DMhEh@rD~AxCvChCtDlC~BrCrAhDl@tCBxOk@hSNjI^jLbArOfCtJ~BrEnBxAvAjBlAfBHbBg@`D{CpAsAhBiBdDmFjEsKzEwG|GkOzAgE`B}GpAqK^uJn@iKv@cErBwG`BiD|@yA`GoGlKgG`L}FzLuFzPyEfC[vEJ`VfCzY|C`IHhEL`@A?gBAmBAoEx@qNRwC@e@j@?^@RCp@Qt@k@vAqBzAfAgAh@E|@?RHZDVMLSI",    "boundary": {      "southwest": {        "latitude": 38.5216333,        "longitude": -9.223433199999999      },      "northeast": {        "latitude": 38.9176332,        "longitude": -8.8376208      }    }  }}</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideSchedulePassengerRequest">
+    <a class="href-link" href="#RideSchedulePassengerRequest">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Passenger Request
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">POST</td>
+                            <td class="name last">/user/:user/rideSchedule/:scheduleId/request</td>
+                            </tr>
+                            </table>
+                            Request to participate on the specified ride schedule.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr><tr>
+            <td class="name">:scheduleId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id of the affecting ride schedule.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">204</td>
+            
+            
+            <td class="description last">The passenger request to the ride schedule succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">404</td>
+            
+            
+            <td class="description last">The requested schedule id for the specified user id does not exist.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line455">line 455</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleSearch">
+    <a class="href-link" href="#RideScheduleSearch">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Search
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">GET</td>
+                            <td class="name last">/user/:user/rideSchedule/search</td>
+                            </tr>
+                            </table>
+                            Search for the specified ride schedule.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Query Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">date</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Specifies the searching date and time (iso 8601 format).</td>
+          </tr><tr>
+            <td class="name">tolerance</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">Specifies the time tolerance in minutes.</td>
+          </tr><tr>
+            <td class="name">toDestination</td>
+            <td class="type">boolean</td>
+            
+            
+            <td class="description last">Specifies if searching for to or from destination ride schedules.</td>
+          </tr><tr>
+            <td class="name">meetingPoint</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Specifies the searching meeting point coordinates (latitude,longitude format).</td>
+          </tr><tr>
+            <td class="name">radius</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">Specifies the searching maximum radius from meeting point in meters.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr>
+          </table>
+                            <h5>Response:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Attributes</th>
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">id</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's id.</td>
+          </tr><tr>
+            <td class="name">rideGroupId</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's ride group id.</td>
+          </tr><tr>
+            <td class="name">realizationDate</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule's realization date (iso 8601 format).</td>
+          </tr><tr>
+            <td class="name">driver.name</td>
+            <td class="type">string</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule driver's name.</td>
+          </tr><tr>
+            <td class="name">driver.avatar.fileName</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule driver's avatar file name on the server.</td>
+          </tr><tr>
+            <td class="name">driver.avatar.mimeType</td>
+            <td class="type">string</td>
+            <td class="attributes">optional</td>
+            
+            <td class="description last">The ride schedule driver's avatar file mime type.</td>
+          </tr><tr>
+            <td class="name">vehicle.fuelType</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's fuel type. Possible values: 1 (Gasoline), 2 (Diesel), 3 (Gpl), 4 (Electric).</td>
+          </tr><tr>
+            <td class="name">vehicle.consumption</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's consumption in l/100 km or kWh/100 km..</td>
+          </tr><tr>
+            <td class="name">vehicle.emissions</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's CO2 emissions in g/km.</td>
+          </tr><tr>
+            <td class="name">vehicle.seats</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's seats.</td>
+          </tr><tr>
+            <td class="name">vehicle.remainingSeats</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule vehicle's remaining seats.</td>
+          </tr><tr>
+            <td class="name">route.duration</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's duration.</td>
+          </tr><tr>
+            <td class="name">route.distance</td>
+            <td class="type">number</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">The ride schedule route's distance.</td>
+          </tr><tr>
+            <td class="name">route.hasTolls</td>
+            <td class="type">boolean</td>
+            <td class="attributes"></td>
+            
+            <td class="description last">If the ride schedule route's has tools.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">200</td>
+            
+            
+            <td class="description last">The user's ride schedule searching succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line69">line 69</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Possible request:</p>
+    
+    
+        <pre class="prettyprint"><code>http://127.0.0.1:2450/api/user/me/rideSchedule/search?date=2020-11-05T13%3A34%3A00Z&amp;tolerance=10&amp;toDestination=true&amp;meetingPoint=38.9176205%2C-9.2240000&amp;radius=50</code></pre>
+    
+
+        <p class="code-caption">Possible output with mode as driver:</p>
+    
+    
+        <pre class="prettyprint"><code>[  {    "id": "5fa2a0c8481a0e3bd017c21d",    "rideGroupId": "5fa2a0c5481a0e3bd017c21a",    "realizationDate": "2020-11-05T13:30:00.000Z",    "driver": {      "name": "Edgar Santos",      "avatar": {        "fileName": "3229c0fae86ecf38929161777824f5c5",        "mimeType": "image/jpeg"      }    },    "vehicle": {      "fuelType": 1,      "consumption": 12,      "emissions": 24,      "seats": 5,      "remainingSeats": 4    },    "route": {      "duration": 2767,      "distance": 67534,      "hasTolls": true    }  }]</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="RideScheduleSetStatus">
+    <a class="href-link" href="#RideScheduleSetStatus">#</a>
+    
+        
+            <span class='tag'>route</span>
+        
+    
+    <span class="code-name">
+        Ride Schedule Set Status
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <h5>Route:</h5>
+                            <table class="params">
+                            <thead><tr><th>Method</th><th class="last">Path</th></tr></thead>
+                            <tr>
+                            <td class="type">PUT</td>
+                            <td class="name last">/user/:user/rideSchedule/:scheduleId/status</td>
+                            </tr>
+                            </table>
+                            Set the status of the specified ride schedule.
+                          <h5>Authentication</h5>
+                          <p>This route requires a valid user's token. If authentication fails it will return a 401 http status code.</p>
+                            <h5>Body Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">status</td>
+            <td class="type">number</td>
+            
+            
+            <td class="description last">The new ride schedule's status. Possible values: 2 (waiting for passengers), 3 (started), 4 (finished), 5 (canceled).</td>
+          </tr>
+          </table>
+                            <h5>Header Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">Authorization</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The authentication user's token.</td>
+          </tr>
+          </table>
+                            <h5>Route Parameters:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            <td class="name">:user</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">Use 'me' to reference the logged-in user or specify a user's id to act on the behalf of that user.</td>
+          </tr><tr>
+            <td class="name">:scheduleId</td>
+            <td class="type">string</td>
+            
+            
+            <td class="description last">The ride schedule's id of the affecting ride schedule.</td>
+          </tr>
+          </table>
+                            <h5>Response Code:</h5>
+          <table class="params">
+            <thead>
+              <tr>
+                
+                <th>Type</th>
+                
+                
+                <th class="last">Description</th>
+              </tr>
+            </thead>
+            <tr>
+            
+            <td class="type">204</td>
+            
+            
+            <td class="description last">The ride schedule status update succeeded.</td>
+          </tr><tr>
+            
+            <td class="type">401</td>
+            
+            
+            <td class="description last">The user authentication has failed.</td>
+          </tr><tr>
+            
+            <td class="type">403</td>
+            
+            
+            <td class="description last">The authenticated user does not have permission.</td>
+          </tr><tr>
+            
+            <td class="type">404</td>
+            
+            
+            <td class="description last">The requested schedule id for the specified user id does not exist.</td>
+          </tr><tr>
+            
+            <td class="type">422</td>
+            
+            
+            <td class="description last">The request content is unable to be processed due to invalid fields.</td>
+          </tr><tr>
+            
+            <td class="type">500</td>
+            
+            
+            <td class="description last">An internal server error.</td>
+          </tr>
+          </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_routes_user_user.rideSchedule.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_routes_user_user.rideSchedule.js.html">src/routes/user/user.rideSchedule.js</a>, <a href="src_routes_user_user.rideSchedule.js.html#line491">line 491</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

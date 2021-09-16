@@ -1,0 +1,1142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> src/controllers/user/user.rideGroup.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-src_main.html">src/main</a></li></ul></div><div class="category"><h2>Controllers</h2><h3>Modules</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul><h3>Classes</h3><ul><li><a href="module-AuthController.html">AuthController</a></li><li><a href="module-DebugNotificationController.html">DebugNotificationController</a></li><li><a href="module-UserController.html">UserController</a></li><li><a href="module-UserProfileController.html">UserProfileController</a></li><li><a href="module-UserRideGroupController.html">UserRideGroupController</a></li><li><a href="module-UserRideScheduleController.html">UserRideScheduleController</a></li><li><a href="module-UserSettingsController.html">UserSettingsController</a></li><li><a href="module-UserUserBlacklistController.html">UserUserBlacklistController</a></li><li><a href="module-UserVehicleController.html">UserVehicleController</a></li></ul></div><div class="category"><h2>Models</h2><h3>Modules</h3><ul><li><a href="module-ChatMessageModel.html">ChatMessageModel</a></li><li><a href="module-ChatRoomModel.html">ChatRoomModel</a></li><li><a href="module-NewsModel.html">NewsModel</a></li><li><a href="module-NotificationModel.html">NotificationModel</a></li><li><a href="module-RideGroupModel.html">RideGroupModel</a></li><li><a href="module-RideHistoryModel.html">RideHistoryModel</a></li><li><a href="module-RideRouteModel.html">RideRouteModel</a></li><li><a href="module-RideScheduleModel.html">RideScheduleModel</a></li><li><a href="module-UserModel.html">UserModel</a></li><li><a href="module-UserNotificationModel.html">UserNotificationModel</a></li><li><a href="module-VehicleModel.html">VehicleModel</a></li></ul></div><div class="category"><h2>Models.Schemas</h2><h3>Modules</h3><ul><li><a href="module-BoundarySchema.html">BoundarySchema</a></li><li><a href="module-FileSchema.html">FileSchema</a></li><li><a href="module-LocationSchema.html">LocationSchema</a></li><li><a href="module-PointSchema.html">PointSchema</a></li></ul></div><div class="category"><h2>Routes</h2><h3>Modules</h3><ul><li><a href="module-AuthRoute.html">AuthRoute</a></li><li><a href="module-DebugNotificationRoute.html">DebugNotificationRoute</a></li><li><a href="module-DebugRoute.html">DebugRoute</a></li><li><a href="module-UserProfileRoute.html">UserProfileRoute</a></li><li><a href="module-UserRideGroupRoute.html">UserRideGroupRoute</a></li><li><a href="module-UserRideScheduleRoute.html">UserRideScheduleRoute</a></li><li><a href="module-UserRoute.html">UserRoute</a></li><li><a href="module-UserSettingRoute.html">UserSettingRoute</a></li><li><a href="module-UserUserBlacklistRoute.html">UserUserBlacklistRoute</a></li><li><a href="module-UserVehicleRoute.html">UserVehicleRoute</a></li></ul></div><div class="category"><h2>Utils</h2><h3>Modules</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li><li><a href="module-Validator.html">Validator</a></li></ul><h3>Classes</h3><ul><li><a href="module-ApiError.html">ApiError</a></li><li><a href="module-NotificationManager.html">NotificationManager</a></li><li><a href="module-RideManager.html">RideManager</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/controllers/user/user.rideGroup.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module UserRideGroupController
+ * @category Controllers
+ */
+
+'use strict'
+
+/*
+ * ==================================================
+ * | Imports                                        |
+ * ==================================================
+ */
+import express from 'express'
+import expressValidator from 'express-validator'
+import HttpStatus from 'http-status-codes'
+import mongoose from 'mongoose'
+import luxon from 'luxon'
+
+import { REG_TIME } from '../../utils/validator.js'
+import ApiError from '../../utils/apiError.js'
+import NotificationManager from '../../utils/notificationManager.js'
+import RideManager from '../../utils/rideManager.js'
+import { RideGroupModel, RideScheduleModel, RideHistoryModel } from '../../models/index.js'
+
+/*
+ * ==================================================
+ * | Constants                                      |
+ * ==================================================
+ */
+const { checkSchema, validationResult } = expressValidator
+const { ReasonPhrases, StatusCodes } = HttpStatus
+const { DateTime, Duration } = luxon
+
+/*
+ * ==================================================
+ * | Exports                                        |
+ * ==================================================
+ */
+
+/**
+ * Class representing the user's ride group controller.
+ *
+ * @category Controllers
+ */
+export default class {
+  /*
+  * ==================================================
+  * | Public validation functions                    |
+  * ==================================================
+  */
+
+  /**
+   * Validate get ride groups input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateGetRideGroups () {
+    return [
+      checkSchema({
+        mode: {
+          in: ['query'],
+          isIn: {
+            options: [['driver', 'passenger']]
+          }
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate get ride group detail input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateGetRideGroupDetail () {
+    return [
+      checkSchema({
+        groupId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate create ride group input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateCreateRideGroup () {
+    return [
+      checkSchema({
+        alias: {
+          in: ['body'],
+          isString: true,
+          trim: true,
+          escape: true
+        },
+        vehicleId: {
+          in: ['body'],
+          isMongoId: true
+        },
+        passengers: {
+          in: ['body'],
+          optional: true,
+          isArray: true
+        },
+        'passengers.*': {
+          in: ['body'],
+          isMongoId: true
+        },
+        'meetingPoint.latitude': {
+          in: ['body'],
+          isFloat: {
+            options: {
+              min: -90,
+              max: 90
+            }
+          },
+          toFloat: true
+        },
+        'meetingPoint.longitude': {
+          in: ['body'],
+          isFloat: {
+            options: {
+              min: -180,
+              max: 180
+            }
+          },
+          toFloat: true
+        },
+        toDestination: {
+          in: ['body'],
+          isBoolean: true,
+          toBoolean: true
+        },
+        avoidTolls: {
+          in: ['body'],
+          isBoolean: true,
+          toBoolean: true
+        },
+        recurrent: {
+          in: ['body'],
+          isBoolean: true,
+          toBoolean: true
+        },
+        date: {
+          in: ['body'],
+          if: {
+            options: (value, { req, location, path }) => {
+              return !req.body.recurrent
+            }
+          },
+          isISO8601: {
+            options: {
+              strict: true
+            }
+          },
+          toDate: true
+        },
+        weekDays: {
+          in: ['body'],
+          custom: {
+            options: (value, { req, location, path }) => {
+              if (req.body.recurrent === false) return true
+
+              if (typeof value !== 'object' || value === null) return false
+
+              return value.sunday === true || value.monday === true || value.tuesday === true || value.wednesday === true || value.thursday === true || value.friday === true || value.saturday === true
+            }
+          }
+        },
+        'weekDays.monday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        'weekDays.tuesday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        'weekDays.wednesday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        'weekDays.thursday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        'weekDays.friday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        'weekDays.saturday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        'weekDays.sunday': {
+          in: ['body'],
+          optional: true,
+          isBoolean: true
+        },
+        departureTime: {
+          in: ['body'],
+          custom: {
+            options: (value, { req, location, path }) => {
+              if (req.body.recurrent === false) return true
+
+              return REG_TIME.test(value)
+            }
+          }
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate edit ride group input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateEditRideGroup () {
+    return [
+      checkSchema({
+        groupId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        alias: {
+          in: ['body'],
+          isString: true,
+          trim: true,
+          escape: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate delete ride group input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateDeleteRideGroup () {
+    return [
+      checkSchema({
+        groupId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate add passenger to ride group input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateAddPassengerToRideGroup () {
+    return [
+      checkSchema({
+        groupId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        passengerId: {
+          in: ['body'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate remove passenger from ride group input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateRemovePassengerFromRideGroup () {
+    return [
+      checkSchema({
+        groupId: {
+          in: ['params'],
+          isMongoId: true
+        },
+        passengerId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /**
+   * Validate renew ride group input.
+   *
+   * @returns {object[]} Array of validator functions.
+   */
+  static validateRenewRideGroup () {
+    return [
+      checkSchema({
+        groupId: {
+          in: ['params'],
+          isMongoId: true
+        }
+      })
+    ]
+  }
+
+  /*
+  * ==================================================
+  * | Public route functions                         |
+  * ==================================================
+  */
+
+  /**
+   * Get the user's ride groups as a driver or passenger.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getRideGroups (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Prepare find conditions
+      const findConditions = {
+        isDisabled: false
+      }
+      switch (req.query.mode) {
+        case 'driver':
+          findConditions.driverId = userId
+          break
+        case 'passenger':
+          findConditions['passengers.' + userId] = { $exists: true }
+          break
+      }
+
+      // Retrieve ride group documents
+      const rideGroupDocs = await RideGroupModel.find(findConditions, {
+        alias: true,
+        passengers: true,
+        'recurrent.expiration': true,
+        toDestination: true
+      })
+        .populate('driverId', 'givenName surname avatar')
+        .populate('vehicleId', 'fuelType consumption emissions seats')
+        .populate('passengers.$*.userId', 'givenName surname name avatar')
+        .populate('route', '-_id summary duration distance startLocation endLocation polyline boundary hasTolls')
+        .lean({ virtuals: true })
+        .map(docs => {
+          return docs.map(doc => {
+            return {
+              id: doc._id,
+              alias: doc.alias,
+              driver: {
+                id: doc.driverId._id,
+                name: doc.driverId.name,
+                avatar: doc.driverId.avatar ? {
+                  fileName: doc.driverId.avatar.fileName,
+                  mimeType: doc.driverId.avatar.mimeType
+                } : undefined
+              },
+              vehicle: {
+                id: doc.vehicleId._id,
+                fuelType: doc.vehicleId.fuelType,
+                consumption: doc.vehicleId.consumption,
+                emissions: doc.vehicleId.emissions,
+                seats: doc.vehicleId.seats,
+                remainingSeats: doc.vehicleId.seats - Object.keys(doc.passengers).length
+              },
+              passengers: Object.values(doc.passengers).map(passenger => {
+                return {
+                  id: passenger.userId._id,
+                  name: passenger.userId.name,
+                  avatar: passenger.userId.avatar ? {
+                    fileName: passenger.userId.avatar.fileName,
+                    mimeType: passenger.userId.avatar.mimeType
+                  } : undefined
+                }
+              }),
+              toDestination: doc.toDestination,
+              isRecurrent: !!doc.recurrent,
+              route: {
+                summary: doc.route.summary,
+                duration: doc.route.duration,
+                distance: doc.route.distance,
+                hasTolls: doc.route.hasTolls,
+                startLocation: {
+                  address: doc.route.startLocation.address,
+                  coordinates: {
+                    latitude: doc.route.startLocation.point.coordinates[1],
+                    longitude: doc.route.startLocation.point.coordinates[0]
+                  }
+                },
+                endLocation: {
+                  address: doc.route.endLocation.address,
+                  coordinates: {
+                    latitude: doc.route.endLocation.point.coordinates[1],
+                    longitude: doc.route.endLocation.point.coordinates[0]
+                  }
+                },
+                polyline: doc.route.polyline,
+                boundary: {
+                  southwest: {
+                    latitude: doc.route.boundary.southwest.coordinates[1],
+                    longitude: doc.route.boundary.southwest.coordinates[0]
+                  },
+                  northeast: {
+                    latitude: doc.route.boundary.northeast.coordinates[1],
+                    longitude: doc.route.boundary.northeast.coordinates[0]
+                  }
+                }
+              },
+              isExpired: doc.recurrent ? DateTime.utc() > DateTime.fromJSDate(doc.recurrent.expiration) : undefined
+            }
+          })
+        })
+        .exec()
+
+      // Prepare return object
+      const returnRideGroups = []
+
+      // Add the next ride group schedule realization date to the returning ride groups
+      for (const doc of rideGroupDocs) {
+        // Ignore expired ride groups if not the driver
+        if (req.query.mode !== 'driver' &amp;&amp; doc.isExpired) continue
+
+        // Ignore next schedule if expired
+        if (doc.isExpired) {
+          returnRideGroups.push(doc)
+          continue
+        }
+
+        const nextSchedule = await RideScheduleModel.findOne({
+          rideGroupId: doc.id,
+          realizationDate: { $gte: new Date() },
+          status: RideScheduleModel.schema.statics.Status.Scheduled,
+          isDisabled: false
+        },
+        {
+          realizationDate: true
+        })
+          .sort({ realizationDate: 1 })
+          .lean()
+          .exec()
+        if (nextSchedule) {
+          // if (req.query.mode !== 'driver') {
+          //   delete doc.isExpired
+          // }
+
+          doc.nextScheduleDate = nextSchedule.realizationDate
+          returnRideGroups.push(doc)
+        }
+      }
+
+      res.status(200).send(returnRideGroups)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Get the specified ride group details.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async getRideGroupDetail (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve specified ride group document
+      const rideGroupDoc = await RideGroupModel.findOne({
+        _id: req.params.groupId,
+        isDisabled: false
+      }, {
+        alias: true,
+        passengers: true,
+        'recurrent.weekDays': true,
+        'recurrent.departureTime': true,
+        'recurrent.expiration': true,
+        toDestination: true
+      })
+        .populate('driverId', 'givenName surname title avatar')
+        .populate('vehicleId', 'fuelType consumption emissions seats')
+        .populate('passengers.$*.userId', 'givenName surname avatar')
+        .populate('route', '-_id summary duration distance startLocation endLocation polyline boundary hasTolls')
+        .lean({ virtuals: true })
+        .map(doc => {
+          if (!doc) return
+
+          const returnDoc = {
+            id: doc._id,
+            alias: doc.alias,
+            driver: {
+              id: doc.driverId._id,
+              name: doc.driverId.name,
+              title: doc.driverId.title,
+              avatar: doc.driverId.avatar ? {
+                fileName: doc.driverId.avatar.fileName,
+                mimeType: doc.driverId.avatar.mimeType
+              } : undefined
+            },
+            vehicle: {
+              id: doc.vehicleId._id,
+              fuelType: doc.vehicleId.fuelType,
+              consumption: doc.vehicleId.consumption,
+              emissions: doc.vehicleId.emissions,
+              seats: doc.vehicleId.seats,
+              remainingSeats: doc.vehicleId.seats - Object.keys(doc.passengers).length
+            },
+            passengers: Object.values(doc.passengers).map(passenger => {
+              return {
+                id: passenger.userId._id,
+                name: passenger.userId.name,
+                avatar: passenger.userId.avatar ? {
+                  fileName: passenger.userId.avatar.fileName,
+                  mimeType: passenger.userId.avatar.mimeType
+                } : undefined
+              }
+            }),
+            toDestination: doc.toDestination,
+            isRecurrent: !!doc.recurrent,
+            route: {
+              summary: doc.route.summary,
+              duration: doc.route.duration,
+              distance: doc.route.distance,
+              hasTolls: doc.route.hasTolls,
+              startLocation: {
+                address: doc.route.startLocation.address,
+                coordinates: {
+                  latitude: doc.route.startLocation.point.coordinates[1],
+                  longitude: doc.route.startLocation.point.coordinates[0]
+                }
+              },
+              endLocation: {
+                address: doc.route.endLocation.address,
+                coordinates: {
+                  latitude: doc.route.endLocation.point.coordinates[1],
+                  longitude: doc.route.endLocation.point.coordinates[0]
+                }
+              },
+              polyline: doc.route.polyline,
+              boundary: {
+                southwest: {
+                  latitude: doc.route.boundary.southwest.coordinates[1],
+                  longitude: doc.route.boundary.southwest.coordinates[0]
+                },
+                northeast: {
+                  latitude: doc.route.boundary.northeast.coordinates[1],
+                  longitude: doc.route.boundary.northeast.coordinates[0]
+                }
+              }
+            },
+            isExpired: doc.recurrent ? DateTime.utc() > DateTime.fromJSDate(doc.recurrent.expiration) : undefined
+          }
+          if (returnDoc.isRecurrent === true) {
+            returnDoc.weekDays = {
+              sunday: doc.recurrent.weekDays.sunday || undefined,
+              monday: doc.recurrent.weekDays.monday || undefined,
+              tuesday: doc.recurrent.weekDays.tuesday || undefined,
+              wednesday: doc.recurrent.weekDays.wednesday || undefined,
+              thursday: doc.recurrent.weekDays.thursday || undefined,
+              friday: doc.recurrent.weekDays.friday || undefined,
+              saturday: doc.recurrent.weekDays.saturday || undefined
+            }
+            returnDoc.departureTime = doc.recurrent.departureTime
+          }
+          return returnDoc
+        })
+        .exec()
+      if (!rideGroupDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Retrieve user's given rides
+      const rideHistoryDocs = await RideHistoryModel.find({
+        driverId: rideGroupDoc.driver.id
+      }, {
+        passengers: 1
+      })
+        .lean()
+        .exec()
+
+      // Process user rating average
+      const givenRidesData = {
+        count: rideHistoryDocs.length,
+        ratingSum: 0,
+        ratingCount: 0
+      }
+      for (const givenRide of rideHistoryDocs) {
+        if (!givenRide.passengers) continue
+
+        for (const passenger of Object.values(givenRide.passengers)) {
+          if (!passenger.rating) continue
+
+          givenRidesData.ratingSum += passenger.rating.rating
+          ++givenRidesData.ratingCount
+        }
+      }
+      rideGroupDoc.driver.rating = givenRidesData.ratingCount ? Math.round((givenRidesData.ratingSum / givenRidesData.ratingCount) * 2) / 2 : 0
+      rideGroupDoc.driver.ratingCount = givenRidesData.ratingCount
+
+      // Retrieve the ride group's schedules
+      if (!rideGroupDoc.isExpired) {
+        const durationLimit = Duration.fromISO(process.env.RIDE_GROUP_MAX_DISTANTE)
+        const startDate = DateTime.utc()
+        const endDate = startDate.plus(durationLimit)
+        const rideScheduleDocs = await RideScheduleModel.find({
+          rideGroupId: rideGroupDoc.id,
+          realizationDate: {
+            $gte: startDate.toJSDate(),
+            $lt: endDate.toJSDate()
+          },
+          status: RideScheduleModel.schema.statics.Status.Scheduled,
+          isDisabled: false
+        },
+        {
+          realizationDate: true
+        })
+          .sort({ realizationDate: 1 })
+          .lean()
+          .map(docs => {
+            return docs.map(doc => {
+              return {
+                id: doc._id,
+                realizationDate: DateTime.fromJSDate(doc.realizationDate).toUTC().toISO()
+              }
+            })
+          })
+          .exec()
+        rideGroupDoc.nextSchedules = rideScheduleDocs
+      }
+
+      res.status(StatusCodes.OK).send(rideGroupDoc)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Create a new ride group to the specified user.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async createRideGroup (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Start a mongodb transaction session
+      await mongoose.connection.transaction(async (session) => {
+        // Initialize ride manager class with a mongodb transaction session
+        const rideManager = new RideManager(session)
+
+        // Create the ride group
+        const rideGroup = await rideManager.createGroup(
+          req.body.alias,
+          userId,
+          req.body.vehicleId,
+          req.body.passengers,
+          req.body.meetingPoint,
+          req.body.toDestination,
+          req.body.avoidTolls,
+          req.body.recurrent,
+          req.body.weekDays,
+          req.body.departureTime
+        )
+
+        // Calc ride group possible routes
+        // TODO IMPROVEMENT: Make this async due to the use of external requests to Google Directions API, in case of errors a notification should be sent to the user
+        await rideManager.calcRoutes(rideGroup._id, req.body.meetingPoint, req.body.toDestination, req.body.avoidTolls)
+
+        // Create ride group schedules
+        if (req.body.recurrent === true) {
+          await rideManager.renewGroup(rideGroup._id)
+        } else {
+          // Check if the ride date is inside defined interval limit
+          const durationLimit = Duration.fromISO(process.env.RIDE_GROUP_MAX_DISTANTE)
+          const startDate = DateTime.utc()
+          const endDate = startDate.plus(durationLimit)
+          if (req.body.date &lt; startDate.toJSDate() || req.body.date >= endDate.toJSDate()) {
+            throw new ApiError('The specified date is lower than ' + startDate.toLocaleString(DateTime.DATETIME_FULL) + ' or greater than or equal to ' + endDate.toLocaleString(DateTime.DATETIME_MED) + '.', StatusCodes.UNPROCESSABLE_ENTITY) // TODO Use i18n
+          }
+
+          await rideManager.addSchedules(rideGroup._id, [req.body.date])
+        }
+      })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.CREATED)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Edit the specified ride group.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async editRideGroup (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve the ride group
+      const rideGroupDoc = await RideGroupModel.findOne({
+        _id: req.params.groupId,
+        driverId: userId,
+        isDisabled: false
+      }).exec()
+      if (!rideGroupDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Update the ride group
+      rideGroupDoc.alias = req.body.alias
+      await rideGroupDoc.save()
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Delete the specified ride group.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async deleteRideGroup (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve ride group alias and passengers
+      const rideScheduleDocs = await RideScheduleModel.find({
+        rideGroupId: req.params.groupId,
+        realizationDate: { $gte: new Date() },
+        status: RideScheduleModel.schema.statics.Status.Scheduled,
+        isDisabled: false
+      }, {
+        'passengerRequests.userId': true,
+        'passengerRequests.status': true,
+        'passengerRequests.isDisabled': true
+      })
+        .lean()
+        .exec()
+      const rideGroupDoc = await RideGroupModel.findOne({
+        _id: req.params.groupId,
+        driverId: userId,
+        isDisabled: false
+      }, {
+        alias: true,
+        passengers: true
+      })
+        .lean()
+        .map(doc => {
+          if (!doc) return
+
+          const passengers = []
+
+          // Handle ride group passengers
+          for (const passenger of Object.keys(doc.passengers)) {
+            passengers.push(passenger)
+          }
+
+          // Handle ride schedules accepted passengers requests
+          for (const scheduleDoc of rideScheduleDocs) {
+            for (const passenger of scheduleDoc.passengerRequests) {
+              if (passenger.isDisabled === true ||
+              passenger.status === RideScheduleModel.schema.statics.PassengerRequestStatus.Rejected) {
+                continue
+              }
+
+              const passengerId = passenger.userId._id.toString()
+              if (passengers.indexOf(passengerId) === -1) {
+                passengers.push(passengerId)
+              }
+            }
+          }
+
+          // Prepare returning ride group alias and passengers
+          return {
+            alias: doc.alias,
+            passengers: passengers
+          }
+        })
+        .exec()
+      if (!rideGroupDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Start a mongodb transaction session
+      await mongoose.connection.transaction(async (session) => {
+        // Initialize ride manager class with a mongodb transaction session
+        const rideManager = new RideManager(session)
+
+        // Disable the ride group
+        await rideManager.disableGroup(req.params.groupId, userId)
+      })
+
+      // Notify the passengers that the ride group has been deleted
+      NotificationManager.sendAll(rideGroupDoc.passengers, 'PASSENGER_RIDE_GROUP_DELETED', {
+        RIDE_GROUP_ALIAS: rideGroupDoc.alias
+      })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Add passenger to the specified ride group.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async addPassengerToRideGroup (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve the specified ride group document
+      const rideGroupDoc = await RideGroupModel.findOne({
+        _id: req.params.groupId,
+        driverId: userId,
+        isDisabled: false
+      }).exec()
+      if (!rideGroupDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Add the passenger to the ride group document
+      rideGroupDoc.passengers.set(req.body.passengerId, {
+        userId: req.body.passengerId
+      })
+      await rideGroupDoc.save()
+
+      // Notify the passenger that has been added from the ride group
+      NotificationManager.send(req.body.passengerId, 'PASSENGER_ADDED_RIDE_GROUP', {
+        RIDE_GROUP_ALIAS: rideGroupDoc.alias
+      }, { rideGroupId: rideGroupDoc._id })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Remove passenger from the specified ride group.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async removePassengerFromRideGroup (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Set request user's id
+      const userId = req.user
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Retrieve the specified ride group document
+      const rideGroupDoc = await RideGroupModel.findOne({
+        _id: req.params.groupId,
+        driverId: userId,
+        ['passengers.' + req.params.passengerId]: { $exists: true },
+        isDisabled: false
+      }).exec()
+      if (!rideGroupDoc) {
+        throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+      }
+
+      // Add the passenger to the ride group document
+      rideGroupDoc.passengers.set(req.params.passengerId, undefined)
+      await rideGroupDoc.save()
+
+      // Notify the passenger that has been removed from the ride group
+      NotificationManager.send(req.params.passengerId, 'PASSENGER_REMOVED_RIDE_GROUP', {
+        RIDE_GROUP_ALIAS: rideGroupDoc.alias
+      }, { rideGRoupId: rideGroupDoc._id })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  /**
+   * Renew the specified ride group.
+   *
+   * @param {express.Request}       req   The express request object.
+   * @param {express.Response}      res   The express response object.
+   * @param {express.NextFunction}  next  The express next middleware function.
+   */
+  static async renewRideGroup (req, res, next) {
+    try {
+      // Check the logged-in user permission
+      if (req.params.user !== 'me') {
+        throw new ApiError(ReasonPhrases.FORBIDDEN, StatusCodes.FORBIDDEN)
+      }
+
+      // Check for request validation errors
+      const errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        throw new ApiError('Request fields are invalid!', StatusCodes.UNPROCESSABLE_ENTITY, errors.array()) // TODO Use i18n
+      }
+
+      // Start a mongodb transaction session
+      await mongoose.connection.transaction(async (session) => {
+        // Initialize ride manager class with a mongodb transaction session
+        const rideManager = new RideManager(session)
+
+        // Renew ride group schedules
+        const renewResult = await rideManager.renewGroup(req.params.groupId, true)
+        if (!renewResult) {
+          throw new ApiError(ReasonPhrases.NOT_FOUND, StatusCodes.NOT_FOUND)
+        }
+      })
+
+      // Send response to the user
+      res.sendStatus(StatusCodes.NO_CONTENT)
+    } catch (err) {
+      next(err)
+    }
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>
